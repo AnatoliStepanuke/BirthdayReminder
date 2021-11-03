@@ -13,9 +13,9 @@
 		DC3F1343272F11C900D1C517 /* eventChecker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC3F1341272F11C900D1C517 /* eventChecker.xcdatamodeld */; };
 		DC3F1345272F11C900D1C517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3F1344272F11C900D1C517 /* Assets.xcassets */; };
 		DC3F1348272F11C900D1C517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3F1346272F11C900D1C517 /* LaunchScreen.storyboard */; };
-		DCF089C827315A8200143794 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF089C727315A8200143794 /* TableViewController.swift */; };
-		DCF089CB27315B7C00143794 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF089C927315B7C00143794 /* TableViewCell.swift */; };
-		DCF089CC27315B7C00143794 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCF089CA27315B7C00143794 /* TableViewCell.xib */; };
+		DCF089C827315A8200143794 /* MainListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF089C727315A8200143794 /* MainListTableViewController.swift */; };
+		DCF089CB27315B7C00143794 /* PersonInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF089C927315B7C00143794 /* PersonInfoTableViewCell.swift */; };
+		DCF089CC27315B7C00143794 /* PersonInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCF089CA27315B7C00143794 /* PersonInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		DC3F1344272F11C900D1C517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC3F1347272F11C900D1C517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC3F1349272F11C900D1C517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCF089C727315A8200143794 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		DCF089C927315B7C00143794 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		DCF089CA27315B7C00143794 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		DCF089C727315A8200143794 /* MainListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewController.swift; sourceTree = "<group>"; };
+		DCF089C927315B7C00143794 /* PersonInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfoTableViewCell.swift; sourceTree = "<group>"; };
+		DCF089CA27315B7C00143794 /* PersonInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonInfoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +43,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC3571982731972600BB7D3C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DC3F1346272F11C900D1C517 /* LaunchScreen.storyboard */,
+				DC3F133E272F11C900D1C517 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DC3571992731974E00BB7D3C /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				DC35719B2731976600BB7D3C /* XIBView */,
+				DC35719A2731975A00BB7D3C /* XIBClass */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		DC35719A2731975A00BB7D3C /* XIBClass */ = {
+			isa = PBXGroup;
+			children = (
+				DCF089C927315B7C00143794 /* PersonInfoTableViewCell.swift */,
+			);
+			path = XIBClass;
+			sourceTree = "<group>";
+		};
+		DC35719B2731976600BB7D3C /* XIBView */ = {
+			isa = PBXGroup;
+			children = (
+				DCF089CA27315B7C00143794 /* PersonInfoTableViewCell.xib */,
+			);
+			path = XIBView;
+			sourceTree = "<group>";
+		};
+		DC35719C2731979A00BB7D3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DC3F132C272F11C900D1C517 = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +103,10 @@
 		DC3F1337272F11C900D1C517 /* eventChecker */ = {
 			isa = PBXGroup;
 			children = (
-				DCF089C42731575900143794 /* Views */,
-				DCF089C52731578100143794 /* ViewControllers */,
-				DCF089C6273157D100143794 /* CellsClasses */,
-				DCF089C32731574100143794 /* AppDelegates */,
+				DC35719C2731979A00BB7D3C /* Model */,
+				DCF089C42731575900143794 /* View */,
+				DCF089C52731578100143794 /* Controller */,
+				DCF089C32731574100143794 /* AppDelegate */,
 				DC3F1344272F11C900D1C517 /* Assets.xcassets */,
 				DC3F1349272F11C900D1C517 /* Info.plist */,
 				DC3F1341272F11C900D1C517 /* eventChecker.xcdatamodeld */,
@@ -73,39 +114,30 @@
 			path = eventChecker;
 			sourceTree = "<group>";
 		};
-		DCF089C32731574100143794 /* AppDelegates */ = {
+		DCF089C32731574100143794 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				DC3F1338272F11C900D1C517 /* AppDelegate.swift */,
 				DC3F133A272F11C900D1C517 /* SceneDelegate.swift */,
 			);
-			path = AppDelegates;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		DCF089C42731575900143794 /* Views */ = {
+		DCF089C42731575900143794 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DC3F1346272F11C900D1C517 /* LaunchScreen.storyboard */,
-				DC3F133E272F11C900D1C517 /* Main.storyboard */,
-				DCF089CA27315B7C00143794 /* TableViewCell.xib */,
+				DC3571992731974E00BB7D3C /* XIB */,
+				DC3571982731972600BB7D3C /* Storyboard */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		DCF089C52731578100143794 /* ViewControllers */ = {
+		DCF089C52731578100143794 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DCF089C727315A8200143794 /* TableViewController.swift */,
+				DCF089C727315A8200143794 /* MainListTableViewController.swift */,
 			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		DCF089C6273157D100143794 /* CellsClasses */ = {
-			isa = PBXGroup;
-			children = (
-				DCF089C927315B7C00143794 /* TableViewCell.swift */,
-			);
-			path = CellsClasses;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC3F1348272F11C900D1C517 /* LaunchScreen.storyboard in Resources */,
-				DCF089CC27315B7C00143794 /* TableViewCell.xib in Resources */,
+				DCF089CC27315B7C00143794 /* PersonInfoTableViewCell.xib in Resources */,
 				DC3F1345272F11C900D1C517 /* Assets.xcassets in Resources */,
 				DC3F1340272F11C900D1C517 /* Main.storyboard in Resources */,
 			);
@@ -180,11 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCF089CB27315B7C00143794 /* TableViewCell.swift in Sources */,
+				DCF089CB27315B7C00143794 /* PersonInfoTableViewCell.swift in Sources */,
 				DC3F1343272F11C900D1C517 /* eventChecker.xcdatamodeld in Sources */,
 				DC3F1339272F11C900D1C517 /* AppDelegate.swift in Sources */,
 				DC3F133B272F11C900D1C517 /* SceneDelegate.swift in Sources */,
-				DCF089C827315A8200143794 /* TableViewController.swift in Sources */,
+				DCF089C827315A8200143794 /* MainListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
