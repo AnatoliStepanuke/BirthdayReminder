@@ -18,6 +18,16 @@ final class MainListTableViewController: UITableViewController {
     private func setupNavigationController() {
         title = "Birthdays List"
         navigationController?.navigationBar.prefersLargeTitles = true
+        let plusButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openScreenForSaveVCDidTapped))
+        navigationItem.rightBarButtonItem = plusButton
+        plusButton.tintColor = .black
+    }
+    
+    // MARK: - Helpers
+    @objc private func openScreenForSaveVCDidTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let ScreenForSaveViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForSaveViewController")
+        navigationController?.pushViewController(ScreenForSaveViewController, animated: true)
     }
     
     // MARK: - Table view data source
