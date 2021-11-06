@@ -4,16 +4,20 @@ final class MainListTableViewController: UITableViewController {
     // MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupPersonalInfoXIBCell()
-        title = "Birthdays List"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        tableView.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
-        tableView.separatorStyle = .none
+        setupTableView()
+        setupNavigationController()
     }
 
     // MARK: - Setups
-    private func setupPersonalInfoXIBCell() {
+    private func setupTableView() {
         tableView.register(UINib(nibName: "PersonInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "PersonInfoTableViewCell")
+        tableView.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
+        tableView.separatorStyle = .none
+    }
+    
+    private func setupNavigationController() {
+        title = "Birthdays List"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // MARK: - Table view data source
