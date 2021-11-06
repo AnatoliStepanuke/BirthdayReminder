@@ -1,6 +1,7 @@
 import UIKit
 
 final class MainListTableViewController: UITableViewController {
+    
     // MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ final class MainListTableViewController: UITableViewController {
         plusButton.tintColor = .black
     }
     
-    // MARK: - Helpers
+    // MARK: - Actions
     @objc private func openScreenForSaveVCDidTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let ScreenForSaveViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForSaveViewController")

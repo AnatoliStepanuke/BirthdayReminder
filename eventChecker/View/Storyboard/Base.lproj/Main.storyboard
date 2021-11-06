@@ -34,13 +34,71 @@
                     <view key="view" contentMode="scaleToFill" id="CG4-zw-qQl">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter some information below:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqs-gj-0UH">
+                                <rect key="frame" x="50" y="114" width="328" height="20.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdX-kb-9J4">
+                                <rect key="frame" x="30" y="152.66666666666666" width="368" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqC-Bd-UuG">
+                                <rect key="frame" x="30" y="206.66666666666666" width="368" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-l2-UrM">
+                                <rect key="frame" x="5" y="355" width="418" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfg-jd-cJ4">
+                                <rect key="frame" x="30" y="749.66666666666663" width="368" height="47.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButtonDidTapped:" destination="UB2-1J-YQh" eventType="touchUpInside" id="04l-dQ-Fbw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zsB-tm-oJw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gdX-kb-9J4" firstAttribute="height" secondItem="hqC-Bd-UuG" secondAttribute="height" id="23Z-CU-Zlh"/>
+                            <constraint firstItem="gdX-kb-9J4" firstAttribute="leading" secondItem="zsB-tm-oJw" secondAttribute="leading" constant="30" id="4BV-sQ-Guy"/>
+                            <constraint firstItem="HCG-l2-UrM" firstAttribute="leading" secondItem="zsB-tm-oJw" secondAttribute="leading" constant="5" id="6k5-Tj-u3z"/>
+                            <constraint firstItem="pfg-jd-cJ4" firstAttribute="leading" secondItem="zsB-tm-oJw" secondAttribute="leading" constant="30" id="ARd-Ne-bjh"/>
+                            <constraint firstItem="zsB-tm-oJw" firstAttribute="trailing" secondItem="pfg-jd-cJ4" secondAttribute="trailing" constant="30" id="CSH-J5-Jr7"/>
+                            <constraint firstItem="hqC-Bd-UuG" firstAttribute="top" secondItem="gdX-kb-9J4" secondAttribute="bottom" constant="20" id="D2U-uw-Pd0"/>
+                            <constraint firstItem="HCG-l2-UrM" firstAttribute="centerX" secondItem="CG4-zw-qQl" secondAttribute="centerX" id="Dhf-ir-HRy"/>
+                            <constraint firstItem="gdX-kb-9J4" firstAttribute="top" secondItem="jqs-gj-0UH" secondAttribute="bottom" constant="18" id="KRe-kI-jEQ"/>
+                            <constraint firstItem="HCG-l2-UrM" firstAttribute="centerY" secondItem="CG4-zw-qQl" secondAttribute="centerY" id="OPF-V1-FhZ"/>
+                            <constraint firstItem="jqs-gj-0UH" firstAttribute="top" secondItem="zsB-tm-oJw" secondAttribute="top" constant="70" id="RaD-Kk-aHV"/>
+                            <constraint firstItem="zsB-tm-oJw" firstAttribute="trailing" secondItem="gdX-kb-9J4" secondAttribute="trailing" constant="30" id="S5Q-is-deH"/>
+                            <constraint firstItem="gdX-kb-9J4" firstAttribute="width" secondItem="hqC-Bd-UuG" secondAttribute="width" id="ZOG-8C-kXk"/>
+                            <constraint firstAttribute="trailing" secondItem="HCG-l2-UrM" secondAttribute="trailing" constant="5" id="nPr-Hy-hcr"/>
+                            <constraint firstItem="zsB-tm-oJw" firstAttribute="trailing" secondItem="jqs-gj-0UH" secondAttribute="trailing" constant="50" id="pmJ-je-A17"/>
+                            <constraint firstItem="gdX-kb-9J4" firstAttribute="centerX" secondItem="CG4-zw-qQl" secondAttribute="centerX" id="rJY-Ck-gVO"/>
+                            <constraint firstItem="jqs-gj-0UH" firstAttribute="leading" secondItem="zsB-tm-oJw" secondAttribute="leading" constant="50" id="rWF-KZ-j1P"/>
+                            <constraint firstItem="zsB-tm-oJw" firstAttribute="bottom" secondItem="pfg-jd-cJ4" secondAttribute="bottom" constant="95" id="ux3-jK-F3y"/>
+                            <constraint firstItem="hqC-Bd-UuG" firstAttribute="centerX" secondItem="CG4-zw-qQl" secondAttribute="centerX" id="xv6-Pk-PHD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="HCG-l2-UrM" id="9tX-1o-CxN"/>
+                        <outlet property="enterInfoLabel" destination="jqs-gj-0UH" id="WF3-pq-t1n"/>
+                        <outlet property="nameField" destination="gdX-kb-9J4" id="zBy-ha-XVw"/>
+                        <outlet property="surnameField" destination="hqC-Bd-UuG" id="1WF-xj-vM5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rb5-Yo-oBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1799" y="89"/>
+            <point key="canvasLocation" x="1798.5981308411215" y="88.768898488120954"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ldL-ym-sYY">
@@ -62,6 +120,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
