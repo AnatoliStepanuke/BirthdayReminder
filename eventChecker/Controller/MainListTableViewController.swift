@@ -12,7 +12,7 @@ final class MainListTableViewController: UITableViewController {
     // MARK: - Setups
     private func setupTableView() {
         tableView.register(UINib(nibName: "PersonInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "PersonInfoTableViewCell")
-        tableView.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
+        tableView.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
         tableView.separatorStyle = .none
     }
     
