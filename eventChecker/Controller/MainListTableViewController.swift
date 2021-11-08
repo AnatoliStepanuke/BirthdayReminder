@@ -1,7 +1,6 @@
 import UIKit
 
 final class MainListTableViewController: UITableViewController {
-    
     // MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()

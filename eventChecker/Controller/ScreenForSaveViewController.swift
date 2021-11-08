@@ -1,7 +1,6 @@
 import UIKit
 
 final class ScreenForSaveViewController: UIViewController {
-    
     //MARK: - Outlets
     @IBOutlet weak private var enterInfoLabel: UILabel!
     @IBOutlet weak private var nameField: UITextField!
@@ -17,12 +16,17 @@ final class ScreenForSaveViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
+        setupView()
+        setupEnterInfoLabel()
         setupNavigationController()
         setupSaveButton()
     }
     
     //MARK: - Setups
+    private func setupView() {
+        view.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
+    }
+    
     private func setupNavigationController() {
         title = "New Info"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -30,5 +34,11 @@ final class ScreenForSaveViewController: UIViewController {
     
     private func setupSaveButton() {
         saveButton.roundedbutton()
+    }
+    
+    private func setupEnterInfoLabel() {
+        enterInfoLabel.backgroundColor = .white
+        enterInfoLabel.layer.masksToBounds = true
+        enterInfoLabel.layer.cornerRadius = 15
     }
 }

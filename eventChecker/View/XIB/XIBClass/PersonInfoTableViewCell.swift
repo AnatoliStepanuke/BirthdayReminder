@@ -1,7 +1,6 @@
 import UIKit
 
 final class PersonInfoTableViewCell: UITableViewCell {
-
     // MARK: - Outlets
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var nameLabel: UILabel!
