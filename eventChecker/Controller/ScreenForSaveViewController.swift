@@ -17,8 +17,9 @@ final class ScreenForSaveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        setupEnterInfoLabel()
         setupNavigationController()
+        setupEnterInfoLabel()
+        setupFields()
         setupSaveButton()
     }
     
@@ -32,13 +33,18 @@ final class ScreenForSaveViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    private func setupSaveButton() {
-        saveButton.roundedbutton()
-    }
-    
     private func setupEnterInfoLabel() {
         enterInfoLabel.backgroundColor = .white
         enterInfoLabel.layer.masksToBounds = true
-        enterInfoLabel.layer.cornerRadius = 15
+        enterInfoLabel.layer.cornerRadius = 16
+    }
+    
+    private func setupFields() {
+        nameField.roundedTextField()
+        surnameField.roundedTextField()
+    }
+    
+    private func setupSaveButton() {
+        saveButton.roundedButton()
     }
 }
