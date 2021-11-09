@@ -57,7 +57,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-l2-UrM">
                                 <rect key="frame" x="5" y="355" width="418" height="216"/>
                                 <connections>
-                                    <action selector="datePickerDidTapper:" destination="UB2-1J-YQh" eventType="valueChanged" id="8f9-mg-vKT"/>
+                                    <action selector="datePickerAction:" destination="UB2-1J-YQh" eventType="valueChanged" id="iVB-x9-OqT"/>
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfg-jd-cJ4">
@@ -71,7 +71,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="saveButtonDidTapped:" destination="UB2-1J-YQh" eventType="touchUpInside" id="eR7-Vs-Gv5"/>
+                                    <action selector="saveButtonAction:" destination="UB2-1J-YQh" eventType="touchUpInside" id="4C9-uH-3V5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,6 +99,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="HCG-l2-UrM" id="j9h-Eg-yhu"/>
                         <outlet property="enterInfoLabel" destination="jqs-gj-0UH" id="WF3-pq-t1n"/>
                         <outlet property="nameField" destination="gdX-kb-9J4" id="zBy-ha-XVw"/>
                         <outlet property="saveButton" destination="pfg-jd-cJ4" id="HqY-in-La4"/>

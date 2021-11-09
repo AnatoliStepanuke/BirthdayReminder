@@ -24,6 +24,7 @@ final class MainListTableViewController: UITableViewController {
     }
     
     // MARK: - Actions
+    // MARK: Objc Methods
     @objc private func openScreenForSaveVCDidTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let ScreenForSaveViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForSaveViewController")
