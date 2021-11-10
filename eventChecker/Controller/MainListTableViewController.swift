@@ -1,6 +1,9 @@
 import UIKit
 
 final class MainListTableViewController: UITableViewController {
+    // MARK: - Constants
+    let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
+    
     // MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,7 +14,7 @@ final class MainListTableViewController: UITableViewController {
     // MARK: - Setups
     private func setupTableView() {
         tableView.register(UINib(nibName: "PersonInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "PersonInfoTableViewCell")
-        tableView.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
+        tableView.backgroundColor = backgroundShadow
         tableView.separatorStyle = .none
     }
     
