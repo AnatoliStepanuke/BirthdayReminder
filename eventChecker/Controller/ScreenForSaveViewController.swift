@@ -3,6 +3,7 @@ import UIKit
 final class ScreenForSaveViewController: UIViewController {
     // MARK: - Constants
     private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
+    private let dateFormatter = DateFormatter()
     
     //MARK: - Outlets
     @IBOutlet weak private var enterInfoLabel: UILabel!
@@ -12,14 +13,11 @@ final class ScreenForSaveViewController: UIViewController {
     @IBOutlet weak private var saveButton: UIButton!
     
     //MARK: - Actions
-    @IBAction private func datePickerAction(_ sender: Any) {
-        datePicker.addTarget(self, action: #selector(datePickerDidTapped(sender:)), for: UIControl.Event.valueChanged)
-    }
-    
     @IBAction private func saveButtonAction(_ sender: Any) {
         let saveName = nameField.text!
         let saveSurname = surnameField.text!
-        print(saveName + " " + saveSurname)
+        let selectedDate = dateFormatter.string(from: datePicker.date)
+        print(saveName + " " + saveSurname + " " + "\(selectedDate)")
     }
     
     //MARK: - Lifecycle
@@ -29,6 +27,7 @@ final class ScreenForSaveViewController: UIViewController {
         setupNavigationController()
         setupEnterInfoLabel()
         setupFields()
+        setupDateStyle()
         setupSaveButton()
     }
     
@@ -58,12 +57,7 @@ final class ScreenForSaveViewController: UIViewController {
         saveButton.backgroundColor = .white
     }
     
-    //MARK: Objc Methods
-    @objc private func datePickerDidTapped(sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
+    private func setupDateStyle() {
         dateFormatter.dateStyle = DateFormatter.Style.medium
-        
-        let saveDate = dateFormatter.string(from: datePicker.date)
-        print(saveDate)
     }
 }

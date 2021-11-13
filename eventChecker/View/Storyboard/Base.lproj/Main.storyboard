@@ -56,9 +56,6 @@
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-l2-UrM">
                                 <rect key="frame" x="5" y="355" width="418" height="216"/>
-                                <connections>
-                                    <action selector="datePickerAction:" destination="UB2-1J-YQh" eventType="valueChanged" id="iVB-x9-OqT"/>
-                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfg-jd-cJ4">
                                 <rect key="frame" x="30" y="757" width="368" height="40"/>
