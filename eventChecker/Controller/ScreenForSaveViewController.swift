@@ -3,7 +3,6 @@ import UIKit
 final class ScreenForSaveViewController: UIViewController {
     // MARK: - Constants
     private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
-    private let dateFormatter = DateFormatter()
     
     //MARK: - Outlets
     @IBOutlet weak private var enterInfoLabel: UILabel!
@@ -16,9 +15,8 @@ final class ScreenForSaveViewController: UIViewController {
     @IBAction private func saveButtonAction(_ sender: Any) {
         let saveName = nameField.text!
         let saveSurname = surnameField.text!
-        let selectedDateToString = dateFormatter.string(from: datePicker.date)
-        let selectedDateToDate = dateFormatter.date(from: selectedDateToString)!
-        let user = User(name: saveName, surname: saveSurname, date: selectedDateToDate)
+        let selectedDate = datePicker.date
+        let user = User(name: saveName, surname: saveSurname, date: selectedDate).userInfoToString()
         print(user)
     }
     
@@ -29,7 +27,6 @@ final class ScreenForSaveViewController: UIViewController {
         setupNavigationController()
         setupEnterInfoLabel()
         setupFields()
-        setupDateStyle()
         setupSaveButton()
     }
     
@@ -57,9 +54,5 @@ final class ScreenForSaveViewController: UIViewController {
     private func setupSaveButton() {
         saveButton.roundedButton()
         saveButton.backgroundColor = .white
-    }
-    
-    private func setupDateStyle() {
-        dateFormatter.dateStyle = DateFormatter.Style.medium
     }
 }
