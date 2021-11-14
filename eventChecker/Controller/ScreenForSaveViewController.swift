@@ -16,8 +16,10 @@ final class ScreenForSaveViewController: UIViewController {
     @IBAction private func saveButtonAction(_ sender: Any) {
         let saveName = nameField.text!
         let saveSurname = surnameField.text!
-        let selectedDate = dateFormatter.string(from: datePicker.date)
-        print(saveName + " " + saveSurname + " " + "\(selectedDate)")
+        let selectedDateToString = dateFormatter.string(from: datePicker.date)
+        let selectedDateToDate = dateFormatter.date(from: selectedDateToString)!
+        let user = User(name: saveName, surname: saveSurname, date: selectedDateToDate)
+        print(user)
     }
     
     //MARK: - Lifecycle
