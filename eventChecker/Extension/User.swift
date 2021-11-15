@@ -6,8 +6,10 @@ struct User {
     let name: String
     let surname: String
     let date: Date
-    
-    func userInfoToString() -> String {
+}
+
+extension User: CustomStringConvertible {
+    var description: String {
         dateFormatter.dateStyle = .long
         return "\(name) \(surname) \(dateFormatter.string(from: date))"
     }

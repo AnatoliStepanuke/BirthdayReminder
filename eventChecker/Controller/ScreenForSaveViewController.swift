@@ -16,7 +16,7 @@ final class ScreenForSaveViewController: UIViewController {
         let saveName = nameField.text!
         let saveSurname = surnameField.text!
         let selectedDate = datePicker.date
-        let user = User(name: saveName, surname: saveSurname, date: selectedDate).userInfoToString()
+        let user = User(name: saveName, surname: saveSurname, date: selectedDate)
         print(user)
     }
     
