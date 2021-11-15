@@ -17,7 +17,9 @@ final class ScreenForSaveViewController: UIViewController {
         let saveSurname = surnameField.text!
         let selectedDate = datePicker.date
         let user = User(name: saveName, surname: saveSurname, date: selectedDate)
-        print(user)
+        if let encodedData = try? JSONEncoder().encode(user) {
+            UserDefaults.standard.setValue(encodedData, forKey: "userList")
+        }
     }
     
     //MARK: - Lifecycle

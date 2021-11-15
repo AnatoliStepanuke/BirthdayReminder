@@ -15,4 +15,12 @@ final class PersonInfoTableViewCell: UITableViewCell {
         backgroundColor = .clear
         selectionStyle = .none
     }
+    
+    // MARK: - API
+    func configure(using user: User) {
+        nameLabel.text = user.name
+        surnameLabel.text = user.surname
+        dateLabel.text = "\(user.description)"
+    }
 }
+

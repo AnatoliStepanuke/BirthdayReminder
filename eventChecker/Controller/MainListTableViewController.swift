@@ -10,6 +10,11 @@ final class MainListTableViewController: UITableViewController {
         setupTableView()
         setupNavigationController()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    }
 
     // MARK: - Setups
     private func setupTableView() {
@@ -40,7 +45,12 @@ final class MainListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonInfoTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonInfoTableViewCell", for: indexPath) as! PersonInfoTableViewCell
+        if let decodedData = UserDefaults.standard.data(forKey: "userList"),
+           let user = try? JSONDecoder().decode(User.self, from: decodedData) {
+            cell.configure(using: user)
+        }
+        
         return cell
     }
 }
