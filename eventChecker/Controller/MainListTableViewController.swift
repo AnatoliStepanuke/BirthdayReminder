@@ -4,6 +4,9 @@ final class MainListTableViewController: UITableViewController {
     // MARK: - Constants
     private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
     
+    // MARK: - Properties
+    var users: [User] = []
+    
     // MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,6 +17,14 @@ final class MainListTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let decodedData = UserDefaults.standard.data(forKey: "userList"),
+           let user = try? JSONDecoder().decode(User.self, from: decodedData) {
+            users.append(user)
+        }
     }
 
     // MARK: - Setups
@@ -41,14 +52,14 @@ final class MainListTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return users.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonInfoTableViewCell", for: indexPath) as! PersonInfoTableViewCell
         if let decodedData = UserDefaults.standard.data(forKey: "userList"),
-           let user = try? JSONDecoder().decode(User.self, from: decodedData) {
-            cell.configure(using: user)
+           let _ = try? JSONDecoder().decode(User.self, from: decodedData) {
+            cell.configure(using: users[indexPath.row])
         }
         
         return cell
