@@ -4,6 +4,8 @@ final class MainListTableViewController: UITableViewController {
     // MARK: - Constants
     private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
     
+    // MARK: - Objects
+    
     // MARK: - Properties
     var users: [User] = []
     
@@ -21,10 +23,7 @@ final class MainListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let decodedData = UserDefaults.standard.data(forKey: "userList"),
-           let user = try? JSONDecoder().decode(User.self, from: decodedData) {
-            users.append(user)
-        }
+        users = UserManager.instance.getUsersFromUserDefaults()
     }
 
     // MARK: - Setups
@@ -57,11 +56,17 @@ final class MainListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonInfoTableViewCell", for: indexPath) as! PersonInfoTableViewCell
-        if let decodedData = UserDefaults.standard.data(forKey: "userList"),
-           let _ = try? JSONDecoder().decode(User.self, from: decodedData) {
-            cell.configure(using: users[indexPath.row])
-        }
+        cell.configure(using: users[indexPath.row])
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+        print("Deleted")
+
+      users.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+      }
     }
 }

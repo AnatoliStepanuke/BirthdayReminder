@@ -4,6 +4,8 @@ final class ScreenForSaveViewController: UIViewController {
     // MARK: - Constants
     private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
     
+    // MARK: - Objects
+    
     //MARK: - Outlets
     @IBOutlet weak private var enterInfoLabel: UILabel!
     @IBOutlet weak private var nameField: UITextField!
@@ -17,9 +19,7 @@ final class ScreenForSaveViewController: UIViewController {
         let saveSurname = surnameField.text!
         let selectedDate = datePicker.date
         let user = User(name: saveName, surname: saveSurname, date: selectedDate)
-        if let encodedData = try? JSONEncoder().encode(user) {
-            UserDefaults.standard.setValue(encodedData, forKey: "userList")
-        }
+        UserManager.instance.saveUsersToUserDefaults(item: user)
     }
     
     //MARK: - Lifecycle

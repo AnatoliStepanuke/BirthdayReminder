@@ -15,6 +15,7 @@
 		DC3F1348272F11C900D1C517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3F1346272F11C900D1C517 /* LaunchScreen.storyboard */; };
 		DC4C8DC92736D199006FC381 /* ScreenForSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C8DC82736D199006FC381 /* ScreenForSaveViewController.swift */; };
 		DC4C8DCF2737FD5E006FC381 /* UIButton+roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C8DCE2737FD5E006FC381 /* UIButton+roundedButton.swift */; };
+		DC520FC7274E9CAC00D5C368 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC520FC6274E9CAC00D5C368 /* UserDefaultsManager.swift */; };
 		DC8B2DC027398393005FE86C /* UITextField+roundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B2DBF27398393005FE86C /* UITextField+roundedTextField.swift */; };
 		DC8B2DC627412E64005FE86C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B2DC527412E64005FE86C /* User.swift */; };
 		DCF089C827315A8200143794 /* MainListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF089C727315A8200143794 /* MainListTableViewController.swift */; };
@@ -33,6 +34,7 @@
 		DC3F1349272F11C900D1C517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC4C8DC82736D199006FC381 /* ScreenForSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenForSaveViewController.swift; sourceTree = "<group>"; };
 		DC4C8DCE2737FD5E006FC381 /* UIButton+roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+roundedButton.swift"; sourceTree = "<group>"; };
+		DC520FC6274E9CAC00D5C368 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		DC8B2DBF27398393005FE86C /* UITextField+roundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+roundedTextField.swift"; sourceTree = "<group>"; };
 		DC8B2DC527412E64005FE86C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = eventChecker/Extension/User.swift; sourceTree = SOURCE_ROOT; };
 		DCF089C727315A8200143794 /* MainListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		DC3F1337272F11C900D1C517 /* eventChecker */ = {
 			isa = PBXGroup;
 			children = (
+				DC520FC5274E9C6900D5C368 /* Managers */,
 				DC4C8DCD2737FD28006FC381 /* Extension */,
 				DC35719C2731979A00BB7D3C /* Model */,
 				DCF089C42731575900143794 /* View */,
@@ -131,6 +134,14 @@
 				DC8B2DBF27398393005FE86C /* UITextField+roundedTextField.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DC520FC5274E9C6900D5C368 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DC520FC6274E9CAC00D5C368 /* UserDefaultsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		DCF089C32731574100143794 /* AppDelegate */ = {
@@ -238,6 +249,7 @@
 				DC3F133B272F11C900D1C517 /* SceneDelegate.swift in Sources */,
 				DC4C8DCF2737FD5E006FC381 /* UIButton+roundedButton.swift in Sources */,
 				DC8B2DC627412E64005FE86C /* User.swift in Sources */,
+				DC520FC7274E9CAC00D5C368 /* UserDefaultsManager.swift in Sources */,
 				DC8B2DC027398393005FE86C /* UITextField+roundedTextField.swift in Sources */,
 				DCF089C827315A8200143794 /* MainListTableViewController.swift in Sources */,
 				DC4C8DC92736D199006FC381 /* ScreenForSaveViewController.swift in Sources */,
