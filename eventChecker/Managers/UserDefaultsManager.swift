@@ -26,6 +26,14 @@ struct UserManager {
         }
         return []
     }
+    
+    func deleteUsersFromUserDefaults(updatedUsers: Array<User>) {
+        var users = getUsersFromUserDefaults()
+        users = updatedUsers
+        if let encodedData = try? JSONEncoder().encode(users) {
+            defaults.setValue(encodedData, forKey: Constants.UserDefaults.userList)
+        }
+    }
 }
 
 enum Constants {

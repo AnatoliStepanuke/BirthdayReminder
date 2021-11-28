@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y0w-TO-NVm">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <tableViewController id="9JN-WM-iee" customClass="MainListTableViewController" customModule="eventChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="zAm-lN-YEN">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <connections>
@@ -32,11 +32,11 @@
             <objects>
                 <viewController storyboardIdentifier="ScreenForSaveViewController" id="UB2-1J-YQh" customClass="ScreenForSaveViewController" customModule="eventChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CG4-zw-qQl">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter some information below:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqs-gj-0UH">
-                                <rect key="frame" x="30" y="94" width="368" height="40"/>
+                                <rect key="frame" x="30" y="94" width="315" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5ob-a6-GgY"/>
                                 </constraints>
@@ -45,20 +45,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdX-kb-9J4">
-                                <rect key="frame" x="30" y="152" width="368" height="34"/>
+                                <rect key="frame" x="30" y="152" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqC-Bd-UuG">
-                                <rect key="frame" x="30" y="206" width="368" height="34"/>
+                                <rect key="frame" x="30" y="206" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-l2-UrM">
-                                <rect key="frame" x="5" y="269.66666666666669" width="418" height="397.00000000000006"/>
+                                <rect key="frame" x="5" y="269.66666666666669" width="365" height="283.00000000000006"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfg-jd-cJ4">
-                                <rect key="frame" x="30" y="757" width="368" height="40"/>
+                                <rect key="frame" x="30" y="643" width="315" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4d2-Ua-gLZ"/>
                                 </constraints>
@@ -112,7 +112,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y0w-TO-NVm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fZM-XS-e6a">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
