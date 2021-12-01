@@ -1,12 +1,15 @@
 import Foundation
 
-struct UserManager {
+class UserManager {
     // MARK: - Constants
     // MARK: - Private
     private let defaults = UserDefaults.standard
-
+    
     // MARK: - Public
     static let instance = UserManager()
+    
+    // MARK: - Init
+    private init(){ }
     
     // MARK: - Helpers
     private func encode(users: [User]) {
@@ -25,12 +28,12 @@ struct UserManager {
         return []
     }
     
-    func saveUsersToUserDefaults(item: User) {
+    func saveUserToUserDefaults(item: User) {
         var users = getUsersFromUserDefaults()
         users.append(item)
         encode(users: users)
     }
-    
+        
     func getUsersFromUserDefaults() -> [User] {
         decode()
     }

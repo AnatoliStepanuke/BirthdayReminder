@@ -17,7 +17,7 @@ final class ScreenForSaveViewController: UIViewController {
         let saveSurname = surnameField.text!
         let selectedDate = datePicker.date
         let user = User(name: saveName, surname: saveSurname, date: selectedDate)
-        UserManager.instance.saveUsersToUserDefaults(item: user)
+        UserManager.instance.saveUserToUserDefaults(item: user)
     }
     
     //MARK: - Lifecycle
