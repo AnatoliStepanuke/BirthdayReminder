@@ -12,14 +12,12 @@ final class ScreenForSaveViewController: UIViewController {
     @IBOutlet weak private var saveButton: UIButton!
     
     //MARK: - Actions
-    @IBAction private func datePickerAction(_ sender: Any) {
-        datePicker.addTarget(self, action: #selector(datePickerDidTapped(sender:)), for: UIControl.Event.valueChanged)
-    }
-    
     @IBAction private func saveButtonAction(_ sender: Any) {
         let saveName = nameField.text!
         let saveSurname = surnameField.text!
-        print(saveName + " " + saveSurname)
+        let selectedDate = datePicker.date
+        let user = User(name: saveName, surname: saveSurname, date: selectedDate)
+        UserManager.instance.saveUserToUserDefaults(item: user)
     }
     
     //MARK: - Lifecycle
@@ -56,14 +54,5 @@ final class ScreenForSaveViewController: UIViewController {
     private func setupSaveButton() {
         saveButton.roundedButton()
         saveButton.backgroundColor = .white
-    }
-    
-    //MARK: Objc Methods
-    @objc private func datePickerDidTapped(sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = DateFormatter.Style.medium
-        
-        let saveDate = dateFormatter.string(from: datePicker.date)
-        print(saveDate)
     }
 }
