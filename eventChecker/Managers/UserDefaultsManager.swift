@@ -9,15 +9,13 @@ struct UserManager {
     static let instance = UserManager()
     
     // MARK: - Helpers
-    func saveUsersToUserDefaults(item: User) {
-        var users = getUsersFromUserDefaults()
-        users.append(item)
+    func encode(users: [User]) {
         if let encodedData = try? JSONEncoder().encode(users) {
-            defaults.setValue(encodedData, forKey: Constants.UserDefaults.userList)
+            return defaults.setValue(encodedData, forKey: Constants.UserDefaults.userList)
         }
     }
     
-    func getUsersFromUserDefaults() -> [User] {
+    func decode() -> [User] {
         if let decodedData = defaults.data(forKey: Constants.UserDefaults.userList) {
             let users = try? JSONDecoder().decode([User].self, from: decodedData)
             if let resultUsers = users {
@@ -27,11 +25,19 @@ struct UserManager {
         return []
     }
     
-    func deleteUsersFromUserDefaults(updatedUsers: Array<User>) {
+    func saveUsersToUserDefaults(item: User) {
+        var users = getUsersFromUserDefaults()
+        users.append(item)
+        encode(users: users)
+    }
+    
+    func getUsersFromUserDefaults() -> [User] {
+        decode()
+    }
+    
+    func updateUsersFromUserDefaults(updatedUsers: Array<User>) {
         var users = getUsersFromUserDefaults()
         users = updatedUsers
-        if let encodedData = try? JSONEncoder().encode(users) {
-            defaults.setValue(encodedData, forKey: Constants.UserDefaults.userList)
-        }
+        encode(users: users)
     }
 }

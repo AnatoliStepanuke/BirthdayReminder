@@ -5,7 +5,11 @@ final class MainListTableViewController: UITableViewController {
     private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
 
     // MARK: - Properties
-    var users: [User] = []
+    private var users: [User] = [] {
+    didSet {
+            tableView.reloadData()
+        }
+    }
     
     // MARK: - Lyfecycle
     override func viewDidLoad() {
@@ -61,9 +65,8 @@ final class MainListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-          users.remove(at: indexPath.row)
-          tableView.deleteRows(at: [indexPath], with: .automatic)
-          UserManager.instance.deleteUsersFromUserDefaults(updatedUsers: users)
+            users.remove(at: indexPath.row)
+            UserManager.instance.updateUsersFromUserDefaults(updatedUsers: users)
       }
     }
 }

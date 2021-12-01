@@ -1,7 +1,5 @@
 import Foundation
 
-let dateFormatter = DateFormatter()
-
 // MARK: - Constructs
 struct User: Codable {
     let name: String
@@ -12,6 +10,7 @@ struct User: Codable {
 // MARK: - Construct extensions
 extension User: CustomStringConvertible {
     var description: String {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
         return "\(dateFormatter.string(from: date))"
     }
