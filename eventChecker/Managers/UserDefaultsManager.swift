@@ -1,6 +1,6 @@
 import Foundation
 
-class UserManager {
+final class UserManager {
     // MARK: - Constants
     // MARK: - Private
     private let defaults = UserDefaults.standard
