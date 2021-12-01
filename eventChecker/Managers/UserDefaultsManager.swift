@@ -9,13 +9,13 @@ struct UserManager {
     static let instance = UserManager()
     
     // MARK: - Helpers
-    func encode(users: [User]) {
+    private func encode(users: [User]) {
         if let encodedData = try? JSONEncoder().encode(users) {
             return defaults.setValue(encodedData, forKey: Constants.UserDefaults.userList)
         }
     }
     
-    func decode() -> [User] {
+    private func decode() -> [User] {
         if let decodedData = defaults.data(forKey: Constants.UserDefaults.userList) {
             let users = try? JSONDecoder().decode([User].self, from: decodedData)
             if let resultUsers = users {
