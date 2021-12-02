@@ -38,9 +38,13 @@ final class MainListTableViewController: UITableViewController {
     private func setupNavigationController() {
         title = "Birthdays List"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
         let plusButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openScreenForSaveVCDidTapped))
-        navigationItem.rightBarButtonItem = plusButton
         plusButton.tintColor = .black
+        let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(openScreenForStoringDeletedUsersVCDidTapped))
+        trashButton.tintColor = .red
+        
+        navigationItem.rightBarButtonItems = [plusButton, trashButton]
     }
     
     // MARK: - Actions
@@ -49,6 +53,12 @@ final class MainListTableViewController: UITableViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let ScreenForSaveViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForSaveViewController")
         navigationController?.pushViewController(ScreenForSaveViewController, animated: true)
+    }
+    
+    @objc private func openScreenForStoringDeletedUsersVCDidTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let ScreenForStoringDeletedUsersTableViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForStoringDeletedUsersTableViewController")
+        navigationController?.pushViewController(ScreenForStoringDeletedUsersTableViewController, animated: true)
     }
     
     // MARK: - Table view data source

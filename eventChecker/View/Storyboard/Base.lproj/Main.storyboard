@@ -27,6 +27,34 @@
             </objects>
             <point key="canvasLocation" x="1052.8037383177571" y="88.768898488120954"/>
         </scene>
+        <!--Screen For Storing Deleted Users Table View Controller-->
+        <scene sceneID="yNA-Yv-PDP">
+            <objects>
+                <tableViewController storyboardIdentifier="ScreenForStoringDeletedUsersTableViewController" id="hk7-5c-hYj" customClass="ScreenForStoringDeletedUsersTableViewController" customModule="eventChecker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KXa-r4-i7w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rq8-fO-EDZ">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rq8-fO-EDZ" id="IUH-ei-n1Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hk7-5c-hYj" id="K9C-5s-AtS"/>
+                            <outlet property="delegate" destination="hk7-5c-hYj" id="PTm-1E-KEg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDb-VB-hMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="431"/>
+        </scene>
         <!--Screen For Save View Controller-->
         <scene sceneID="1Uz-a7-vbJ">
             <objects>
@@ -104,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rb5-Yo-oBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1798.5981308411215" y="88.768898488120954"/>
+            <point key="canvasLocation" x="1790" y="-232"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ldL-ym-sYY">
