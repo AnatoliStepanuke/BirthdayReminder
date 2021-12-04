@@ -44,7 +44,8 @@ final class MainListTableViewController: UITableViewController {
         let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(openScreenForStoringDeletedUsersVCDidTapped))
         trashButton.tintColor = .red
         
-        navigationItem.rightBarButtonItems = [plusButton, trashButton]
+        navigationItem.rightBarButtonItem = plusButton
+        navigationItem.leftBarButtonItem = trashButton
     }
     
     // MARK: - Actions
