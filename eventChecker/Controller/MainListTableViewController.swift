@@ -76,7 +76,7 @@ final class MainListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            users.remove(at: indexPath.row)
+            UserManager.instance.saveDeletedUserToUserDefaults(item: users.remove(at: indexPath.row))
             UserManager.instance.updateUsersFromUserDefaults(updatedUsers: users)
       }
     }
