@@ -36,8 +36,18 @@ final class ScreenForStoringDeletedUsersTableViewController: UITableViewControll
     }
     
     private func setupNavigationController() {
-        title = "Trash"
+        title = "Garbage"
         navigationController?.navigationBar.prefersLargeTitles = true
+        let deleteAll = UIBarButtonItem(title: "Delete All", style: .plain, target: self, action: #selector(deleteAllUsersInGarbage))
+        deleteAll.tintColor = .red
+        navigationItem.rightBarButtonItem = deleteAll
+    }
+    
+    // MARK: - Actions
+    // MARK: Objc Methods
+    @objc private func deleteAllUsersInGarbage() {
+        deletedUsers.removeAll()
+        UserManager.instance.updateDeletedUsersFromUserDefaults(updatedDeletedUsers: deletedUsers)
     }
     
     // MARK: - Table view data source
@@ -50,5 +60,15 @@ final class ScreenForStoringDeletedUsersTableViewController: UITableViewControll
         cell.configure(using: deletedUsers[indexPath.row])
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            UserManager.instance.updateDeletedUsersFromUserDefaults(updatedDeletedUsers: deletedUsers)
+        }
+        
+//        if editingStyle == .insert {
+//
+//        }
     }
 }

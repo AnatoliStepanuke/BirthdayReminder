@@ -45,12 +45,18 @@ final class UserManager {
     }
     
     func saveDeletedUserToUserDefaults(item: User) {
-        var users = getDeletedUsersFromUserDefautls()
-        users.append(item)
-        encode(users: users, key: Constants.UserDefaults.deleteUserList)
+        var deletedUsers = getDeletedUsersFromUserDefautls()
+        deletedUsers.append(item)
+        encode(users: deletedUsers, key: Constants.UserDefaults.deleteUserList)
     }
     
     func getDeletedUsersFromUserDefautls() -> [User] {
         decode(key: Constants.UserDefaults.deleteUserList)
+    }
+    
+    func updateDeletedUsersFromUserDefaults(updatedDeletedUsers: Array<User>) {
+        var deletedUsers = getDeletedUsersFromUserDefautls()
+        deletedUsers = updatedDeletedUsers
+        encode(users: deletedUsers, key: Constants.UserDefaults.deleteUserList)
     }
 }

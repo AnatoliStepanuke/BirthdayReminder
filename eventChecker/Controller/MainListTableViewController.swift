@@ -38,12 +38,10 @@ final class MainListTableViewController: UITableViewController {
     private func setupNavigationController() {
         title = "Birthdays List"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
         let plusButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openScreenForSaveVCDidTapped))
         plusButton.tintColor = .black
         let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(openScreenForStoringDeletedUsersVCDidTapped))
         trashButton.tintColor = .red
-        
         navigationItem.rightBarButtonItem = plusButton
         navigationItem.leftBarButtonItem = trashButton
     }
