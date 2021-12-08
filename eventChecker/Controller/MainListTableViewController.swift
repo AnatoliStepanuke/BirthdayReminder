@@ -39,8 +39,11 @@ final class MainListTableViewController: UITableViewController {
         title = "Birthdays List"
         navigationController?.navigationBar.prefersLargeTitles = true
         let plusButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openScreenForSaveVCDidTapped))
-        navigationItem.rightBarButtonItem = plusButton
         plusButton.tintColor = .black
+        let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(openTrashTableVCDidTapped))
+        trashButton.tintColor = .systemRed
+        navigationItem.rightBarButtonItem = plusButton
+        navigationItem.leftBarButtonItem = trashButton
     }
     
     // MARK: - Actions
@@ -49,6 +52,12 @@ final class MainListTableViewController: UITableViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let ScreenForSaveViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForSaveViewController")
         navigationController?.pushViewController(ScreenForSaveViewController, animated: true)
+    }
+    
+    @objc private func openTrashTableVCDidTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let ScreenForStoringDeletedUsersTableViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForStoringDeletedUsersTableViewController")
+        navigationController?.pushViewController(ScreenForStoringDeletedUsersTableViewController, animated: true)
     }
     
     // MARK: - Table view data source
@@ -65,7 +74,7 @@ final class MainListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            users.remove(at: indexPath.row)
+            UserManager.instance.saveDeletedUserToUserDefaults(item: users.remove(at: indexPath.row))
             UserManager.instance.updateUsersFromUserDefaults(updatedUsers: users)
       }
     }
