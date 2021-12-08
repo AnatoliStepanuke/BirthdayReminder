@@ -59,4 +59,10 @@ final class UserManager {
         deletedUsers = updatedDeletedUsers
         encode(users: deletedUsers, key: Constants.UserDefaults.deleteUserList)
     }
+    
+    func restoreDeletedUser(deletedUser: User) {
+        var users = getUsersFromUserDefaults()
+        users.append(deletedUser)
+        encode(users: users, key: Constants.UserDefaults.userList)
+    }
 }

@@ -39,7 +39,7 @@ final class ScreenForStoringDeletedUsersTableViewController: UITableViewControll
         title = "Garbage"
         navigationController?.navigationBar.prefersLargeTitles = true
         let deleteAll = UIBarButtonItem(title: "Delete All", style: .plain, target: self, action: #selector(deleteAllUsersInGarbage))
-        deleteAll.tintColor = .red
+        deleteAll.tintColor = .systemRed
         navigationItem.rightBarButtonItem = deleteAll
     }
     
@@ -62,13 +62,25 @@ final class ScreenForStoringDeletedUsersTableViewController: UITableViewControll
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            UserManager.instance.updateDeletedUsersFromUserDefaults(updatedDeletedUsers: deletedUsers)
-        }
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        let restoreAction = UIContextualAction(style: .normal, title:  "Restore", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            UserManager.instance.restoreDeletedUser(deletedUser: self.deletedUsers.remove(at: indexPath.row))
+            UserManager.instance.updateDeletedUsersFromUserDefaults(updatedDeletedUsers: self.deletedUsers)
+        })
+        restoreAction.backgroundColor = .systemGreen
         
-//        if editingStyle == .insert {
-//
-//        }
+        return UISwipeActionsConfiguration(actions: [restoreAction])
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        let deleteAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            self.deletedUsers.remove(at: indexPath.row)
+            UserManager.instance.updateDeletedUsersFromUserDefaults(updatedDeletedUsers: self.deletedUsers)
+        })
+        deleteAction.backgroundColor = .systemRed
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }
