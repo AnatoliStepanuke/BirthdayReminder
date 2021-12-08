@@ -1,6 +1,6 @@
 import UIKit
 
-final class ScreenForStoringDeletedUsersTableViewController: UITableViewController {
+final class TrashTableViewController: UITableViewController {
     //MARK: - Constants
     private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
     
@@ -36,11 +36,11 @@ final class ScreenForStoringDeletedUsersTableViewController: UITableViewControll
     }
     
     private func setupNavigationController() {
-        title = "Garbage"
+        title = "Trash"
         navigationController?.navigationBar.prefersLargeTitles = true
-        let deleteAll = UIBarButtonItem(title: "Delete All", style: .plain, target: self, action: #selector(deleteAllUsersInGarbage))
-        deleteAll.tintColor = .systemRed
-        navigationItem.rightBarButtonItem = deleteAll
+        let deleteAllButton = UIBarButtonItem(title: "Delete All", style: .plain, target: self, action: #selector(deleteAllUsersInGarbage))
+        deleteAllButton.tintColor = .systemRed
+        navigationItem.rightBarButtonItem = deleteAllButton
     }
     
     // MARK: - Actions
@@ -65,7 +65,7 @@ final class ScreenForStoringDeletedUsersTableViewController: UITableViewControll
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     {
         let restoreAction = UIContextualAction(style: .normal, title:  "Restore", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-            UserManager.instance.restoreDeletedUser(deletedUser: self.deletedUsers.remove(at: indexPath.row))
+            UserManager.instance.restoreDeletedUserFromTrash(deletedUser: self.deletedUsers.remove(at: indexPath.row))
             UserManager.instance.updateDeletedUsersFromUserDefaults(updatedDeletedUsers: self.deletedUsers)
         })
         restoreAction.backgroundColor = .systemGreen

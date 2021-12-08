@@ -40,7 +40,7 @@ final class MainListTableViewController: UITableViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         let plusButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openScreenForSaveVCDidTapped))
         plusButton.tintColor = .black
-        let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(openScreenForStoringDeletedUsersVCDidTapped))
+        let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(openTrashTableVCDidTapped))
         trashButton.tintColor = .systemRed
         navigationItem.rightBarButtonItem = plusButton
         navigationItem.leftBarButtonItem = trashButton
@@ -54,7 +54,7 @@ final class MainListTableViewController: UITableViewController {
         navigationController?.pushViewController(ScreenForSaveViewController, animated: true)
     }
     
-    @objc private func openScreenForStoringDeletedUsersVCDidTapped() {
+    @objc private func openTrashTableVCDidTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let ScreenForStoringDeletedUsersTableViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForStoringDeletedUsersTableViewController")
         navigationController?.pushViewController(ScreenForStoringDeletedUsersTableViewController, animated: true)
