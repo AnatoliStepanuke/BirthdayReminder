@@ -1,4 +1,5 @@
 import UIKit
+import UserNotifications
 
 final class ScreenForSaveViewController: UIViewController {
     // MARK: - Constants
@@ -18,6 +19,7 @@ final class ScreenForSaveViewController: UIViewController {
         let selectedDate = datePicker.date
         let user = User(name: saveName, surname: saveSurname, date: selectedDate)
         UserManager.instance.saveUserToUserDefaults(item: user)
+        NotificationManager.instance.createNotification(user: user)
     }
     
     //MARK: - Lifecycle
@@ -54,5 +56,10 @@ final class ScreenForSaveViewController: UIViewController {
     private func setupSaveButton() {
         saveButton.roundedButton()
         saveButton.backgroundColor = .white
+    }
+    
+    // MARK: - Touche responders
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

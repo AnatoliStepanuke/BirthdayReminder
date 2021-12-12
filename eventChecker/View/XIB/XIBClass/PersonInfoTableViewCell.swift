@@ -20,7 +20,7 @@ final class PersonInfoTableViewCell: UITableViewCell {
     func configure(using user: User) {
         nameLabel.text = user.name
         surnameLabel.text = user.surname
-        dateLabel.text = "\(user.description)"
+        dateLabel.text = "\(user.dateDescription)"
     }
 }
 
