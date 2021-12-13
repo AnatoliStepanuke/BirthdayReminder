@@ -22,8 +22,7 @@ final class NotificationManager {
     
     private func setupTriggerNotification(user: User) -> UNCalendarNotificationTrigger {
         var dateComponents = Calendar.current.dateComponents([.month, .day], from: user.date)
-        dateComponents.hour = 00
-        dateComponents.minute = 00
+        dateComponents.hour = 9
         return UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
     }
     
@@ -35,6 +34,14 @@ final class NotificationManager {
     // MARK: - Helpers
     func createNotification(user: User) {
         setupContentNotification(user: user)
+        setupRequestNotification(user: user)
+    }
+    
+    func deleteNotification(user: User) {
+        center.removePendingNotificationRequests(withIdentifiers: [user.id])
+    }
+    
+    func restoreDeletedNotification(user: User) {
         setupRequestNotification(user: user)
     }
 }

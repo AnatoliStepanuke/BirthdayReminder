@@ -18,7 +18,7 @@ final class ScreenForSaveViewController: UIViewController {
         let saveSurname = surnameField.text!
         let selectedDate = datePicker.date
         let user = User(name: saveName, surname: saveSurname, date: selectedDate)
-        UserManager.instance.saveUserToUserDefaults(item: user)
+        UserManager.instance.saveUserToUserDefaults(user: user)
         NotificationManager.instance.createNotification(user: user)
     }
     
