@@ -30,7 +30,7 @@
         <!--Trash Table View Controller-->
         <scene sceneID="yNA-Yv-PDP">
             <objects>
-                <tableViewController storyboardIdentifier="ScreenForStoringDeletedUsersTableViewController" id="hk7-5c-hYj" customClass="TrashTableViewController" customModule="eventChecker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TrashTableViewController" id="hk7-5c-hYj" customClass="TrashTableViewController" customModule="eventChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KXa-r4-i7w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDb-VB-hMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="431"/>
+            <point key="canvasLocation" x="1790" y="775"/>
         </scene>
         <!--Screen For Save View Controller-->
         <scene sceneID="1Uz-a7-vbJ">
@@ -122,7 +122,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rb5-Yo-oBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="-232"/>
+            <point key="canvasLocation" x="1790" y="89"/>
+        </scene>
+        <!--Screen For Settings View Controller-->
+        <scene sceneID="NZr-XV-hzu">
+            <objects>
+                <viewController storyboardIdentifier="ScreenForSettingsViewController" id="mHM-vd-0xa" customClass="ScreenForSettingsViewController" customModule="eventChecker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lVW-0N-eb6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xqZ-dw-yFO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6mQ-T9-etB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="-604"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ldL-ym-sYY">
