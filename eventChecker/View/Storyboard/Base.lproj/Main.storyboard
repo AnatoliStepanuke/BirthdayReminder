@@ -131,8 +131,46 @@
                     <view key="view" contentMode="scaleToFill" id="lVW-0N-eb6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="E9e-SA-LlL">
+                                <rect key="frame" x="5" y="325" width="365" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4k-lt-vVn">
+                                <rect key="frame" x="30" y="643" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PTR-kW-QgW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your preferred remind time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXH-6D-HZM">
+                                <rect key="frame" x="30" y="94" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Yyx-4R-s4I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xqZ-dw-yFO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xqZ-dw-yFO" firstAttribute="trailing" secondItem="E9e-SA-LlL" secondAttribute="trailing" constant="5" id="63R-Kg-NIy"/>
+                            <constraint firstItem="E9e-SA-LlL" firstAttribute="top" secondItem="aXH-6D-HZM" secondAttribute="bottom" constant="191" id="Fcv-hV-jeV"/>
+                            <constraint firstItem="xqZ-dw-yFO" firstAttribute="bottom" secondItem="y4k-lt-vVn" secondAttribute="bottom" constant="95" id="JaS-Bg-6TJ"/>
+                            <constraint firstItem="aXH-6D-HZM" firstAttribute="top" secondItem="xqZ-dw-yFO" secondAttribute="top" constant="50" id="LR5-BC-w47"/>
+                            <constraint firstItem="xqZ-dw-yFO" firstAttribute="trailing" secondItem="aXH-6D-HZM" secondAttribute="trailing" constant="30" id="Vkt-DJ-V7U"/>
+                            <constraint firstItem="aXH-6D-HZM" firstAttribute="centerX" secondItem="lVW-0N-eb6" secondAttribute="centerX" id="XSR-ZI-Yp2"/>
+                            <constraint firstItem="E9e-SA-LlL" firstAttribute="leading" secondItem="xqZ-dw-yFO" secondAttribute="leading" constant="5" id="ZOT-L3-tYt"/>
+                            <constraint firstItem="aXH-6D-HZM" firstAttribute="trailing" secondItem="y4k-lt-vVn" secondAttribute="trailing" id="mwC-Jv-njP"/>
+                            <constraint firstItem="y4k-lt-vVn" firstAttribute="top" secondItem="E9e-SA-LlL" secondAttribute="bottom" constant="102" id="pzq-aV-26E"/>
+                            <constraint firstItem="aXH-6D-HZM" firstAttribute="leading" secondItem="y4k-lt-vVn" secondAttribute="leading" id="tNH-2B-5XR"/>
+                            <constraint firstItem="aXH-6D-HZM" firstAttribute="leading" secondItem="xqZ-dw-yFO" secondAttribute="leading" constant="30" id="uhG-Vt-1ue"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mQ-T9-etB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
