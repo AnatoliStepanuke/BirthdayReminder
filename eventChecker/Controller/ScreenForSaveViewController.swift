@@ -10,6 +10,7 @@ final class ScreenForSaveViewController: UIViewController {
     @IBOutlet weak private var nameField: UITextField!
     @IBOutlet weak private var surnameField: UITextField!
     @IBOutlet weak private var datePicker: UIDatePicker!
+    @IBOutlet weak private var timePicker: UIDatePicker!
     @IBOutlet weak private var saveButton: UIButton!
     
     //MARK: - Actions
@@ -17,7 +18,8 @@ final class ScreenForSaveViewController: UIViewController {
         let saveName = nameField.text!
         let saveSurname = surnameField.text!
         let selectedDate = datePicker.date
-        let user = User(name: saveName, surname: saveSurname, date: selectedDate)
+        let selectedTime = timePicker.date
+        let user = User(name: saveName, surname: saveSurname, date: selectedDate, time: selectedTime)
         UserManager.instance.saveUserToUserDefaults(user: user)
         NotificationManager.instance.createNotification(user: user)
     }
@@ -27,7 +29,6 @@ final class ScreenForSaveViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupNavigationController()
-        setupEnterInfoLabel()
         setupFields()
         setupSaveButton()
     }
@@ -40,12 +41,6 @@ final class ScreenForSaveViewController: UIViewController {
     private func setupNavigationController() {
         title = "New Info"
         navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    private func setupEnterInfoLabel() {
-        enterInfoLabel.backgroundColor = .white
-        enterInfoLabel.layer.masksToBounds = true
-        enterInfoLabel.layer.cornerRadius = 16
     }
     
     private func setupFields() {

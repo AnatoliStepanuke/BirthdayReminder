@@ -21,9 +21,11 @@ final class NotificationManager {
     }
     
     private func setupTriggerNotification(user: User) -> UNCalendarNotificationTrigger {
-        var dateComponents = Calendar.current.dateComponents([.month, .day], from: user.date)
-        dateComponents.hour = 9
-        return UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        var date = Calendar.current.dateComponents([.month, .day], from: user.date)
+        let time = Calendar.current.dateComponents([.hour, .minute], from: user.time)
+        date.hour = time.hour
+        date.minute = time.minute
+        return UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
     }
     
     private func setupRequestNotification(user: User) {

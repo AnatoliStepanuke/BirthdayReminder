@@ -1,0 +1,15 @@
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "gdX-kb-9J4"; */
+"gdX-kb-9J4.placeholder" = "Name";
+
+/* Class = "UITextField"; placeholder = "Surname"; ObjectID = "hqC-Bd-UuG"; */
+"hqC-Bd-UuG.placeholder" = "Surname";
+
+/* Class = "UILabel"; text = "Enter some information below:"; ObjectID = "jqs-gj-0UH"; */
+"jqs-gj-0UH.text" = "Enter some information below:";
+
+/* Class = "UIButton"; configuration.title = "Save"; ObjectID = "pfg-jd-cJ4"; */
+"pfg-jd-cJ4.configuration.title" = "Save";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "pfg-jd-cJ4"; */
+"pfg-jd-cJ4.normalTitle" = "Button";

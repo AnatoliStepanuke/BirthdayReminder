@@ -42,9 +42,7 @@ final class MainListTableViewController: UITableViewController {
         plusButton.tintColor = .black
         let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(openTrashTableVCDidTapped))
         trashButton.tintColor = .systemRed
-        let kebabButton = UIBarButtonItem(title: "\u{FE19}", style: .plain, target: self, action: #selector(openSсreenForSettingsVCDidTapped))
-        kebabButton.tintColor = .black
-        navigationItem.rightBarButtonItems = [kebabButton, plusButton]
+        navigationItem.rightBarButtonItem = plusButton
         navigationItem.leftBarButtonItem = trashButton
     }
     
@@ -60,12 +58,6 @@ final class MainListTableViewController: UITableViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let TrashTableViewController = storyboard.instantiateViewController(withIdentifier: "TrashTableViewController")
         navigationController?.pushViewController(TrashTableViewController, animated: true)
-    }
-    
-    @objc private func openSсreenForSettingsVCDidTapped() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let ScreenForSettingsViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForSettingsViewController")
-        navigationController?.pushViewController(ScreenForSettingsViewController, animated: true)
     }
     
     // MARK: - Table view data source

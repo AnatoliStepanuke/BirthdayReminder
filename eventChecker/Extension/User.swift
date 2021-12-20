@@ -6,6 +6,7 @@ struct User: Codable {
     let name: String
     let surname: String
     let date: Date
+    let time: Date
     var id: String = UUID().uuidString
 }
 
