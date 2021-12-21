@@ -50,14 +50,14 @@ final class MainListTableViewController: UITableViewController {
     // MARK: Objc Methods
     @objc private func openScreenForSaveVCDidTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let ScreenForSaveViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForSaveViewController")
-        navigationController?.pushViewController(ScreenForSaveViewController, animated: true)
+        let screenForSaveViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForSaveViewController")
+        navigationController?.pushViewController(screenForSaveViewController, animated: true)
     }
     
     @objc private func openTrashTableVCDidTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let TrashTableViewController = storyboard.instantiateViewController(withIdentifier: "TrashTableViewController")
-        navigationController?.pushViewController(TrashTableViewController, animated: true)
+        let trashTableViewController = storyboard.instantiateViewController(withIdentifier: "TrashTableViewController")
+        navigationController?.pushViewController(trashTableViewController, animated: true)
     }
     
     // MARK: - Table view data source

@@ -48,7 +48,7 @@ final class UserManager {
         var deletedUsers = getDeletedUsersFromUserDefautls()
         deletedUsers.append(deletedUser)
         encode(users: deletedUsers, key: Constants.UserDefaults.deleteUserList)
-        NotificationManager.instance.deleteNotification(user: deletedUser)
+        NotificationManager.instance.deleteNotification(idUser: deletedUser.id)
     }
     
     func getDeletedUsersFromUserDefautls() -> [User] {

@@ -5,8 +5,8 @@ import UIKit
 struct User: Codable {
     let name: String
     let surname: String
-    let date: Date
-    let time: Date
+    let dateOfNotification: Date
+    let timeOfNotification: Date
     var id: String = UUID().uuidString
 }
 
@@ -18,7 +18,7 @@ extension User: CustomStringConvertible {
         let message = """
         name - \(name)
         surname - \(surname)
-        date - \(dateFormatter.string(from: date))
+        date - \(dateFormatter.string(from: dateOfNotification))
         """
         return message
     }
@@ -26,6 +26,6 @@ extension User: CustomStringConvertible {
     var dateDescription: String {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
-        return dateFormatter.string(from: date)
+        return dateFormatter.string(from: dateOfNotification)
     }
 }

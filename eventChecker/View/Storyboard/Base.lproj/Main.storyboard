@@ -89,7 +89,7 @@
                                     <action selector="saveButtonAction:" destination="UB2-1J-YQh" eventType="touchUpInside" id="4C9-uH-3V5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your preffered time to remind:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-dU-6ec">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your preferred time to remind:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-dU-6ec">
                                 <rect key="frame" x="30" y="421" width="315" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="glr-ww-1Lc"/>
