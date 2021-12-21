@@ -4,10 +4,6 @@ import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    // MARK: - Constants
-    private let center = UNUserNotificationCenter.current()
-    
     // MARK: UISceneSession Lifecycle
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         requestToSendNotifications()
@@ -71,7 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Helpers
     private func requestToSendNotifications() {
-        center.requestAuthorization(options: [.alert, .sound], completionHandler: {(granted, error) in
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {(granted, error) in
             if granted {
                 print("Permission to send notifications is obtained")
             } else {
