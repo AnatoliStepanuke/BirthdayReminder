@@ -28,6 +28,7 @@ final class UserManager {
         return []
     }
     
+    // MARK: - API
     func saveUserToUserDefaults(user: User) {
         var users = getUsersFromUserDefaults()
         users.append(user)
