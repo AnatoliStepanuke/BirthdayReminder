@@ -1,36 +1,39 @@
 import UIKit
+import UserNotifications
 
 final class ScreenForSaveViewController: UIViewController {
     // MARK: - Constants
     private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
     
-    //MARK: - Outlets
+    // MARK: - Outlets
     @IBOutlet weak private var enterInfoLabel: UILabel!
     @IBOutlet weak private var nameField: UITextField!
     @IBOutlet weak private var surnameField: UITextField!
     @IBOutlet weak private var datePicker: UIDatePicker!
+    @IBOutlet weak private var timePicker: UIDatePicker!
     @IBOutlet weak private var saveButton: UIButton!
     
-    //MARK: - Actions
+    // MARK: - Actions
     @IBAction private func saveButtonAction(_ sender: Any) {
         let saveName = nameField.text!
         let saveSurname = surnameField.text!
         let selectedDate = datePicker.date
-        let user = User(name: saveName, surname: saveSurname, date: selectedDate)
-        UserManager.instance.saveUserToUserDefaults(item: user)
+        let selectedTime = timePicker.date
+        let user = User(name: saveName, surname: saveSurname, dateOfBirth: selectedDate, timeOfNotification: selectedTime)
+        UserManager.instance.saveUserToUserDefaults(user: user)
+        NotificationManager.instance.createNotification(user: user)
     }
     
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupNavigationController()
-        setupEnterInfoLabel()
         setupFields()
         setupSaveButton()
     }
     
-    //MARK: - Setups
+    // MARK: - Setups
     private func setupView() {
         view.backgroundColor = backgroundShadow
     }
@@ -38,12 +41,6 @@ final class ScreenForSaveViewController: UIViewController {
     private func setupNavigationController() {
         title = "New Info"
         navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    private func setupEnterInfoLabel() {
-        enterInfoLabel.backgroundColor = .white
-        enterInfoLabel.layer.masksToBounds = true
-        enterInfoLabel.layer.cornerRadius = 16
     }
     
     private func setupFields() {
@@ -54,5 +51,10 @@ final class ScreenForSaveViewController: UIViewController {
     private func setupSaveButton() {
         saveButton.roundedButton()
         saveButton.backgroundColor = .white
+    }
+    
+    // MARK: - Touche responders
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

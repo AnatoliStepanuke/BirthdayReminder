@@ -28,9 +28,10 @@ final class UserManager {
         return []
     }
     
-    func saveUserToUserDefaults(item: User) {
+    // MARK: - API
+    func saveUserToUserDefaults(user: User) {
         var users = getUsersFromUserDefaults()
-        users.append(item)
+        users.append(user)
         encode(users: users, key: Constants.UserDefaults.userList)
     }
         
@@ -44,10 +45,11 @@ final class UserManager {
         encode(users: users, key: Constants.UserDefaults.userList)
     }
     
-    func saveDeletedUserToUserDefaults(item: User) {
+    func saveDeletedUserToUserDefaults(deletedUser: User) {
         var deletedUsers = getDeletedUsersFromUserDefautls()
-        deletedUsers.append(item)
+        deletedUsers.append(deletedUser)
         encode(users: deletedUsers, key: Constants.UserDefaults.deleteUserList)
+        NotificationManager.instance.deleteNotification(idUser: deletedUser.id)
     }
     
     func getDeletedUsersFromUserDefautls() -> [User] {
@@ -64,5 +66,6 @@ final class UserManager {
         var users = getUsersFromUserDefaults()
         users.append(deletedUser)
         encode(users: users, key: Constants.UserDefaults.userList)
+        NotificationManager.instance.restoreDeletedNotification(user: deletedUser)
     }
 }

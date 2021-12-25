@@ -50,14 +50,14 @@ final class MainListTableViewController: UITableViewController {
     // MARK: Objc Methods
     @objc private func openScreenForSaveVCDidTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let ScreenForSaveViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForSaveViewController")
-        navigationController?.pushViewController(ScreenForSaveViewController, animated: true)
+        let screenForSaveViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForSaveViewController")
+        navigationController?.pushViewController(screenForSaveViewController, animated: true)
     }
     
     @objc private func openTrashTableVCDidTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let ScreenForStoringDeletedUsersTableViewController = storyboard.instantiateViewController(withIdentifier: "ScreenForStoringDeletedUsersTableViewController")
-        navigationController?.pushViewController(ScreenForStoringDeletedUsersTableViewController, animated: true)
+        let trashTableViewController = storyboard.instantiateViewController(withIdentifier: "TrashTableViewController")
+        navigationController?.pushViewController(trashTableViewController, animated: true)
     }
     
     // MARK: - Table view data source
@@ -71,11 +71,15 @@ final class MainListTableViewController: UITableViewController {
         
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            UserManager.instance.saveDeletedUserToUserDefaults(item: users.remove(at: indexPath.row))
-            UserManager.instance.updateUsersFromUserDefaults(updatedUsers: users)
-      }
+
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        let deleteAction = UIContextualAction(style: .normal, title:  "Move to Trash", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            UserManager.instance.saveDeletedUserToUserDefaults(deletedUser: self.users.remove(at: indexPath.row))
+            UserManager.instance.updateUsersFromUserDefaults(updatedUsers: self.users)
+        })
+        deleteAction.backgroundColor = .systemRed
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y0w-TO-NVm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y0w-TO-NVm">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +30,7 @@
         <!--Trash Table View Controller-->
         <scene sceneID="yNA-Yv-PDP">
             <objects>
-                <tableViewController storyboardIdentifier="ScreenForStoringDeletedUsersTableViewController" id="hk7-5c-hYj" customClass="TrashTableViewController" customModule="eventChecker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TrashTableViewController" id="hk7-5c-hYj" customClass="TrashTableViewController" customModule="eventChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KXa-r4-i7w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDb-VB-hMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="431"/>
+            <point key="canvasLocation" x="1790" y="442"/>
         </scene>
         <!--Screen For Save View Controller-->
         <scene sceneID="1Uz-a7-vbJ">
@@ -54,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter some information below:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqs-gj-0UH">
-                                <rect key="frame" x="30" y="94" width="315" height="40"/>
+                                <rect key="frame" x="30" y="49" width="315" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5ob-a6-GgY"/>
                                 </constraints>
@@ -63,20 +63,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdX-kb-9J4">
-                                <rect key="frame" x="30" y="152" width="315" height="34"/>
+                                <rect key="frame" x="30" y="107" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqC-Bd-UuG">
-                                <rect key="frame" x="30" y="206" width="315" height="34"/>
+                                <rect key="frame" x="30" y="161" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-l2-UrM">
-                                <rect key="frame" x="5" y="269.66666666666669" width="365" height="283.00000000000006"/>
+                                <rect key="frame" x="5" y="200" width="365" height="216"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfg-jd-cJ4">
-                                <rect key="frame" x="30" y="643" width="315" height="40"/>
+                                <rect key="frame" x="30" y="723" width="315" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4d2-Ua-gLZ"/>
                                 </constraints>
@@ -89,6 +89,18 @@
                                     <action selector="saveButtonAction:" destination="UB2-1J-YQh" eventType="touchUpInside" id="4C9-uH-3V5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your preferred time to remind:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-dU-6ec">
+                                <rect key="frame" x="30" y="421" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="glr-ww-1Lc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="E7i-cD-pgR">
+                                <rect key="frame" x="5" y="466" width="365" height="252"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zsB-tm-oJw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,19 +109,25 @@
                             <constraint firstItem="jqs-gj-0UH" firstAttribute="leading" secondItem="gdX-kb-9J4" secondAttribute="leading" id="5ZP-JU-3Sg"/>
                             <constraint firstItem="jqs-gj-0UH" firstAttribute="centerX" secondItem="CG4-zw-qQl" secondAttribute="centerX" id="6pG-mL-D6I"/>
                             <constraint firstItem="zsB-tm-oJw" firstAttribute="trailing" secondItem="HCG-l2-UrM" secondAttribute="trailing" constant="5" id="8gZ-9r-zTh"/>
+                            <constraint firstItem="pfg-jd-cJ4" firstAttribute="trailing" secondItem="Tve-dU-6ec" secondAttribute="trailing" id="9QV-Iy-dxa"/>
                             <constraint firstItem="gdX-kb-9J4" firstAttribute="top" secondItem="jqs-gj-0UH" secondAttribute="bottom" constant="18" id="Ak5-On-fwk"/>
                             <constraint firstItem="jqs-gj-0UH" firstAttribute="leading" secondItem="zsB-tm-oJw" secondAttribute="leading" constant="30" id="B1b-OT-CgP"/>
                             <constraint firstItem="jqs-gj-0UH" firstAttribute="trailing" secondItem="gdX-kb-9J4" secondAttribute="trailing" id="BMs-ED-kPI"/>
-                            <constraint firstItem="HCG-l2-UrM" firstAttribute="top" secondItem="hqC-Bd-UuG" secondAttribute="bottom" constant="29.5" id="YLp-PM-lBi"/>
-                            <constraint firstItem="hqC-Bd-UuG" firstAttribute="trailing" secondItem="pfg-jd-cJ4" secondAttribute="trailing" id="ZLH-yH-kpI"/>
-                            <constraint firstItem="jqs-gj-0UH" firstAttribute="top" secondItem="zsB-tm-oJw" secondAttribute="top" constant="50" id="bSc-Z2-mjx"/>
+                            <constraint firstItem="hqC-Bd-UuG" firstAttribute="leading" secondItem="Tve-dU-6ec" secondAttribute="leading" id="UNX-xj-Tmt"/>
+                            <constraint firstItem="hqC-Bd-UuG" firstAttribute="trailing" secondItem="Tve-dU-6ec" secondAttribute="trailing" id="X9m-Mm-RlD"/>
+                            <constraint firstItem="HCG-l2-UrM" firstAttribute="top" secondItem="hqC-Bd-UuG" secondAttribute="bottom" constant="5" id="YLp-PM-lBi"/>
+                            <constraint firstItem="E7i-cD-pgR" firstAttribute="leading" secondItem="zsB-tm-oJw" secondAttribute="leading" constant="5" id="b7p-Zw-atl"/>
+                            <constraint firstItem="jqs-gj-0UH" firstAttribute="top" secondItem="zsB-tm-oJw" secondAttribute="top" constant="5" id="bSc-Z2-mjx"/>
                             <constraint firstItem="hqC-Bd-UuG" firstAttribute="top" secondItem="gdX-kb-9J4" secondAttribute="bottom" constant="20" id="cx7-qd-5cG"/>
+                            <constraint firstItem="pfg-jd-cJ4" firstAttribute="leading" secondItem="Tve-dU-6ec" secondAttribute="leading" id="djO-P5-huF"/>
                             <constraint firstItem="gdX-kb-9J4" firstAttribute="trailing" secondItem="hqC-Bd-UuG" secondAttribute="trailing" id="f7F-fd-QNv"/>
                             <constraint firstItem="HCG-l2-UrM" firstAttribute="leading" secondItem="zsB-tm-oJw" secondAttribute="leading" constant="5" id="kEO-bG-Bpv"/>
+                            <constraint firstItem="pfg-jd-cJ4" firstAttribute="top" secondItem="E7i-cD-pgR" secondAttribute="bottom" constant="5" id="ocL-cj-OGl"/>
+                            <constraint firstItem="E7i-cD-pgR" firstAttribute="top" secondItem="Tve-dU-6ec" secondAttribute="bottom" constant="5" id="pXJ-1Q-Oiy"/>
                             <constraint firstItem="gdX-kb-9J4" firstAttribute="leading" secondItem="hqC-Bd-UuG" secondAttribute="leading" id="pXX-Ig-rb6"/>
-                            <constraint firstItem="pfg-jd-cJ4" firstAttribute="top" secondItem="HCG-l2-UrM" secondAttribute="bottom" constant="90.5" id="qUz-sm-Fd4"/>
-                            <constraint firstItem="zsB-tm-oJw" firstAttribute="bottom" secondItem="pfg-jd-cJ4" secondAttribute="bottom" constant="95" id="y02-jp-AGW"/>
-                            <constraint firstItem="hqC-Bd-UuG" firstAttribute="leading" secondItem="pfg-jd-cJ4" secondAttribute="leading" id="znc-Pn-CqH"/>
+                            <constraint firstItem="Tve-dU-6ec" firstAttribute="top" secondItem="HCG-l2-UrM" secondAttribute="bottom" constant="5" id="ss7-9h-wli"/>
+                            <constraint firstItem="zsB-tm-oJw" firstAttribute="bottom" secondItem="pfg-jd-cJ4" secondAttribute="bottom" constant="15" id="y02-jp-AGW"/>
+                            <constraint firstItem="E7i-cD-pgR" firstAttribute="trailing" secondItem="zsB-tm-oJw" secondAttribute="trailing" constant="-5" id="yFF-yb-l28"/>
                         </constraints>
                     </view>
                     <connections>
@@ -118,11 +136,12 @@
                         <outlet property="nameField" destination="gdX-kb-9J4" id="zBy-ha-XVw"/>
                         <outlet property="saveButton" destination="pfg-jd-cJ4" id="HqY-in-La4"/>
                         <outlet property="surnameField" destination="hqC-Bd-UuG" id="1WF-xj-vM5"/>
+                        <outlet property="timePicker" destination="E7i-cD-pgR" id="jb7-aY-esR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rb5-Yo-oBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="-232"/>
+            <point key="canvasLocation" x="1789.5999999999999" y="-221.67487684729065"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ldL-ym-sYY">

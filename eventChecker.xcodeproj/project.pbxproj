@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC21BD0C2771EC3400AC2EFE /* NotificationManager+singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC21BD0B2771EC3400AC2EFE /* NotificationManager+singleton.swift */; };
 		DC3F1339272F11C900D1C517 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F1338272F11C900D1C517 /* AppDelegate.swift */; };
 		DC3F133B272F11C900D1C517 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F133A272F11C900D1C517 /* SceneDelegate.swift */; };
 		DC3F1340272F11C900D1C517 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3F133E272F11C900D1C517 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		DC5B19382758CF6400944323 /* TrashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B19372758CF6400944323 /* TrashTableViewController.swift */; };
 		DC8B2DC027398393005FE86C /* UITextField+roundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B2DBF27398393005FE86C /* UITextField+roundedTextField.swift */; };
 		DC8B2DC627412E64005FE86C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B2DC527412E64005FE86C /* User.swift */; };
+		DCB01C4527664F4000B592F4 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB01C4427664F4000B592F4 /* NotificationManager.swift */; };
 		DCF089C827315A8200143794 /* MainListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF089C727315A8200143794 /* MainListTableViewController.swift */; };
 		DCF089CB27315B7C00143794 /* PersonInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF089C927315B7C00143794 /* PersonInfoTableViewCell.swift */; };
 		DCF089CC27315B7C00143794 /* PersonInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCF089CA27315B7C00143794 /* PersonInfoTableViewCell.xib */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC21BD0A276FA0B100AC2EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		DC21BD0B2771EC3400AC2EFE /* NotificationManager+singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+singleton.swift"; sourceTree = "<group>"; };
 		DC3F1335272F11C900D1C517 /* eventChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eventChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3F1338272F11C900D1C517 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC3F133A272F11C900D1C517 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +46,7 @@
 		DC5B19372758CF6400944323 /* TrashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashTableViewController.swift; sourceTree = "<group>"; };
 		DC8B2DBF27398393005FE86C /* UITextField+roundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+roundedTextField.swift"; sourceTree = "<group>"; };
 		DC8B2DC527412E64005FE86C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = eventChecker/Extension/User.swift; sourceTree = SOURCE_ROOT; };
+		DCB01C4427664F4000B592F4 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		DCF089C727315A8200143794 /* MainListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewController.swift; sourceTree = "<group>"; };
 		DCF089C927315B7C00143794 /* PersonInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfoTableViewCell.swift; sourceTree = "<group>"; };
 		DCF089CA27315B7C00143794 /* PersonInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -140,6 +145,7 @@
 				DC8B2DBF27398393005FE86C /* UITextField+roundedTextField.swift */,
 				DC520FC82754119100D5C368 /* UserManager+constants.swift */,
 				DCFC53E3275805B700F8BF36 /* UserManager+singleton.swift */,
+				DC21BD0B2771EC3400AC2EFE /* NotificationManager+singleton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				DC520FC6274E9CAC00D5C368 /* UserDefaultsManager.swift */,
+				DCB01C4427664F4000B592F4 /* NotificationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -255,7 +262,9 @@
 				DCF089CB27315B7C00143794 /* PersonInfoTableViewCell.swift in Sources */,
 				DC3F1343272F11C900D1C517 /* eventChecker.xcdatamodeld in Sources */,
 				DC5B19382758CF6400944323 /* TrashTableViewController.swift in Sources */,
+				DC21BD0C2771EC3400AC2EFE /* NotificationManager+singleton.swift in Sources */,
 				DC3F1339272F11C900D1C517 /* AppDelegate.swift in Sources */,
+				DCB01C4527664F4000B592F4 /* NotificationManager.swift in Sources */,
 				DC3F133B272F11C900D1C517 /* SceneDelegate.swift in Sources */,
 				DC4C8DCF2737FD5E006FC381 /* UIButton+roundedButton.swift in Sources */,
 				DC8B2DC627412E64005FE86C /* User.swift in Sources */,
@@ -275,6 +284,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DC3F133F272F11C900D1C517 /* Base */,
+				DC21BD0A276FA0B100AC2EFE /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
