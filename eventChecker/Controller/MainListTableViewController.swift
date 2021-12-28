@@ -6,7 +6,7 @@ final class MainListTableViewController: UITableViewController {
 
     // MARK: - Properties
     private var users: [User] = [] {
-    didSet {
+        didSet {
             tableView.reloadData()
         }
     }
