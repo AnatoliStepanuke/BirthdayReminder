@@ -19,9 +19,15 @@ final class ScreenForSaveViewController: UIViewController {
         let saveSurname = surnameField.text!
         let selectedDate = datePicker.date
         let selectedTime = timePicker.date
-        let user = User(name: saveName, surname: saveSurname, dateOfBirth: selectedDate, timeOfNotification: selectedTime)
-        UserManager.instance.saveUserToUserDefaults(user: user)
-        NotificationManager.instance.createNotification(user: user)
+        
+        if (saveName.isEmpty) || (saveSurname.isEmpty) {
+            alertEmptyField(title: "Attention", message: "Please, fill all fields")
+        } else {
+            let user = User(name: saveName, surname: saveSurname, dateOfBirth: selectedDate, timeOfNotification: selectedTime)
+            UserManager.instance.saveUserToUserDefaults(user: user)
+            NotificationManager.instance.createNotification(user: user)
+            alertSucceededSaving(title: "Saving succeeded", message: "")
+        }
     }
     
     // MARK: - Lifecycle
@@ -51,6 +57,21 @@ final class ScreenForSaveViewController: UIViewController {
     private func setupSaveButton() {
         saveButton.roundedButton()
         saveButton.backgroundColor = .white
+    }
+    
+    // MARK: - Helpers
+    private func alertEmptyField(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func alertSucceededSaving(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
     // MARK: - Touche responders
