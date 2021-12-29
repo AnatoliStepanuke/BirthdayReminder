@@ -74,9 +74,6 @@
                             </textField>
                             <datePicker contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-l2-UrM">
                                 <rect key="frame" x="5" y="200" width="365" height="216"/>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978314400">
-                                    <!--1969-12-31 10:00:00 PM +0000-->
-                                </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfg-jd-cJ4">
                                 <rect key="frame" x="30" y="723" width="315" height="40"/>

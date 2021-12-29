@@ -4,6 +4,9 @@ import UserNotifications
 final class ScreenForSaveViewController: UIViewController {
     // MARK: - Constants
     private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
+    private let gregorianCalendar = Calendar.init(identifier: .gregorian)
+    private var dateComponents = DateComponents()
+    private let date = Date()
     
     // MARK: - Outlets
     @IBOutlet weak private var enterInfoLabel: UILabel!
@@ -36,6 +39,7 @@ final class ScreenForSaveViewController: UIViewController {
         setupView()
         setupNavigationController()
         setupFields()
+        setupDatePicker()
         setupSaveButton()
     }
     
@@ -57,6 +61,15 @@ final class ScreenForSaveViewController: UIViewController {
     private func setupSaveButton() {
         saveButton.roundedButton()
         saveButton.backgroundColor = .white
+    }
+    
+    private func setupDatePicker() {
+        dateComponents.year = -100
+        let minDate = gregorianCalendar.date(byAdding: dateComponents, to: date)
+        datePicker.minimumDate = minDate
+        dateComponents.year = 0
+        let maxDate = gregorianCalendar.date(byAdding: dateComponents, to: date)
+        datePicker.maximumDate = maxDate
     }
     
     // MARK: - Helpers
