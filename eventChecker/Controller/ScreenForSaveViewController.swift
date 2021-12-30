@@ -4,6 +4,9 @@ import UserNotifications
 final class ScreenForSaveViewController: UIViewController {
     // MARK: - Constants
     private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
+    private let gregorianCalendar = Calendar.init(identifier: .gregorian)
+    private var dateComponents = DateComponents()
+    private let date = Date()
     
     // MARK: - Outlets
     @IBOutlet weak private var enterInfoLabel: UILabel!
@@ -19,9 +22,15 @@ final class ScreenForSaveViewController: UIViewController {
         let saveSurname = surnameField.text!
         let selectedDate = datePicker.date
         let selectedTime = timePicker.date
-        let user = User(name: saveName, surname: saveSurname, dateOfBirth: selectedDate, timeOfNotification: selectedTime)
-        UserManager.instance.saveUserToUserDefaults(user: user)
-        NotificationManager.instance.createNotification(user: user)
+        
+        if (saveName.isEmpty) || (saveSurname.isEmpty) {
+            alertEmptyField(title: "Attention", message: "Please, fill all fields")
+        } else {
+            let user = User(name: saveName, surname: saveSurname, dateOfBirth: selectedDate, timeOfNotification: selectedTime)
+            UserManager.instance.saveUserToUserDefaults(user: user)
+            NotificationManager.instance.createNotification(user: user)
+            alertSucceededSaving(title: "Saving succeeded", message: "")
+        }
     }
     
     // MARK: - Lifecycle
@@ -30,6 +39,7 @@ final class ScreenForSaveViewController: UIViewController {
         setupView()
         setupNavigationController()
         setupFields()
+        setupDatePicker()
         setupSaveButton()
     }
     
@@ -51,6 +61,30 @@ final class ScreenForSaveViewController: UIViewController {
     private func setupSaveButton() {
         saveButton.roundedButton()
         saveButton.backgroundColor = .white
+    }
+    
+    private func setupDatePicker() {
+        dateComponents.year = -100
+        let minDate = gregorianCalendar.date(byAdding: dateComponents, to: date)
+        datePicker.minimumDate = minDate
+        dateComponents.year = 0
+        let maxDate = gregorianCalendar.date(byAdding: dateComponents, to: date)
+        datePicker.maximumDate = maxDate
+    }
+    
+    // MARK: - Helpers
+    private func alertEmptyField(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func alertSucceededSaving(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
     // MARK: - Touche responders

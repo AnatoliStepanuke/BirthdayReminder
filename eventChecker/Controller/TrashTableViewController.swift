@@ -46,8 +46,13 @@ final class TrashTableViewController: UITableViewController {
     // MARK: - Actions
     // MARK: Objc Methods
     @objc private func deleteAllUsersInGarbage() {
-        deletedUsers.removeAll()
-        UserManager.instance.updateDeletedUsersFromUserDefaults(updatedDeletedUsers: deletedUsers)
+        let alert = UIAlertController(title: "Do you really want to wipe out all info in Trash?", message: "This action is can't be reverted", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { _ in
+            self.deletedUsers.removeAll()
+            UserManager.instance.updateDeletedUsersFromUserDefaults(updatedDeletedUsers: self.deletedUsers)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     // MARK: - Table view data source
