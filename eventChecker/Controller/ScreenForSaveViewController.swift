@@ -3,7 +3,6 @@ import UserNotifications
 
 final class ScreenForSaveViewController: UIViewController {
     // MARK: - Constants
-    private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
     private let gregorianCalendar = Calendar.init(identifier: .gregorian)
     private var dateComponents = DateComponents()
     private let date = Date()
@@ -45,7 +44,7 @@ final class ScreenForSaveViewController: UIViewController {
     
     // MARK: - Setups
     private func setupView() {
-        view.backgroundColor = backgroundShadow
+        view.backgroundColor = UIColor.BackgroundColor.shadow
     }
     
     private func setupNavigationController() {
