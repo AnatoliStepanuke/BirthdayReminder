@@ -44,7 +44,7 @@ final class ScreenForSaveViewController: UIViewController {
     
     // MARK: - Setups
     private func setupView() {
-        view.backgroundColor = UIColor.BackgroundColor.shadow
+        view.backgroundColor = UIColor.CustomColor.shadow
     }
     
     private func setupNavigationController() {
@@ -89,5 +89,10 @@ final class ScreenForSaveViewController: UIViewController {
     // MARK: - Touche responders
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    // MARK: - Deinit
+    deinit {
+        print("ScreenForSaveViewController is deleted")
     }
 }

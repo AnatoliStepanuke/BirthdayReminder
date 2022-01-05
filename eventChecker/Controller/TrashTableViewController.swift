@@ -28,7 +28,7 @@ final class TrashTableViewController: UITableViewController {
     // MARK: - Setups
     private func setupTableView() {
         tableView.register(UINib(nibName: "PersonInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "PersonInfoTableViewCell")
-        tableView.backgroundColor = UIColor.BackgroundColor.shadow
+        tableView.backgroundColor = UIColor.CustomColor.shadow
         tableView.separatorStyle = .none
     }
     
@@ -84,5 +84,10 @@ final class TrashTableViewController: UITableViewController {
         deleteAction.backgroundColor = .systemRed
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    // MARK: - Deinit
+    deinit {
+        print("TrashTableViewController is deleted")
     }
 }
