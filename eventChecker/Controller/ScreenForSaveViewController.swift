@@ -44,7 +44,7 @@ final class ScreenForSaveViewController: UIViewController {
     
     // MARK: - Setups
     private func setupView() {
-        view.backgroundColor = UIColor.AppColor.shadow
+        view.backgroundColor = AppColor.shadow
     }
     
     private func setupNavigationController() {
