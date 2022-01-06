@@ -8,12 +8,15 @@ struct User: Codable {
     let dateOfBirth: Date
     let timeOfNotification: Date
     var id: String = UUID().uuidString
+    private let dateFormatter: DateFormatter = DateFormatter()
+    private enum CodingKeys: String, CodingKey {
+        case name, surname, dateOfBirth, timeOfNotification, id
+    }
 }
 
 // MARK: - Construct extensions
 extension User: CustomStringConvertible {
     var description: String {
-        let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
         let message = """
         name - \(name)

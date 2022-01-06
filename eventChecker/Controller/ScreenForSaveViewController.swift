@@ -3,7 +3,6 @@ import UserNotifications
 
 final class ScreenForSaveViewController: UIViewController {
     // MARK: - Constants
-    private let backgroundShadow = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
     private let gregorianCalendar = Calendar.init(identifier: .gregorian)
     private var dateComponents = DateComponents()
     private let date = Date()
@@ -45,7 +44,7 @@ final class ScreenForSaveViewController: UIViewController {
     
     // MARK: - Setups
     private func setupView() {
-        view.backgroundColor = backgroundShadow
+        view.backgroundColor = AppColor.shadow
     }
     
     private func setupNavigationController() {
@@ -90,5 +89,10 @@ final class ScreenForSaveViewController: UIViewController {
     // MARK: - Touche responders
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    // MARK: - Deinit
+    deinit {
+        print("ScreenForSaveViewController is deleted")
     }
 }

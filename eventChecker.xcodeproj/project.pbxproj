@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0C47102784883A002C6844 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C470F2784883A002C6844 /* Colors.swift */; };
 		DC21BD0C2771EC3400AC2EFE /* NotificationManager+singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC21BD0B2771EC3400AC2EFE /* NotificationManager+singleton.swift */; };
 		DC3F1339272F11C900D1C517 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F1338272F11C900D1C517 /* AppDelegate.swift */; };
 		DC3F133B272F11C900D1C517 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F133A272F11C900D1C517 /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC0C470F2784883A002C6844 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DC21BD0A276FA0B100AC2EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		DC21BD0B2771EC3400AC2EFE /* NotificationManager+singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+singleton.swift"; sourceTree = "<group>"; };
 		DC3F1335272F11C900D1C517 /* eventChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eventChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC0C471127878AAB002C6844 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DC0C470F2784883A002C6844 /* Colors.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		DC3571982731972600BB7D3C /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		DC3F1337272F11C900D1C517 /* eventChecker */ = {
 			isa = PBXGroup;
 			children = (
+				DC0C471127878AAB002C6844 /* Assets */,
 				DC520FC5274E9C6900D5C368 /* Managers */,
 				DC4C8DCD2737FD28006FC381 /* Extension */,
 				DC35719C2731979A00BB7D3C /* Model */,
@@ -266,6 +277,7 @@
 				DC3F1339272F11C900D1C517 /* AppDelegate.swift in Sources */,
 				DCB01C4527664F4000B592F4 /* NotificationManager.swift in Sources */,
 				DC3F133B272F11C900D1C517 /* SceneDelegate.swift in Sources */,
+				DC0C47102784883A002C6844 /* Colors.swift in Sources */,
 				DC4C8DCF2737FD5E006FC381 /* UIButton+roundedButton.swift in Sources */,
 				DC8B2DC627412E64005FE86C /* User.swift in Sources */,
 				DCFC53E4275805B700F8BF36 /* UserManager+singleton.swift in Sources */,
