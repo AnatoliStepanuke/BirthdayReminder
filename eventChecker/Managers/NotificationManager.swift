@@ -17,8 +17,10 @@ final class NotificationManager {
     // MARK: - Setups
     private func setupContentNotification(user: User) {
         let yearOfBirth = calendar.dateComponents([.year], from: user.dateOfBirth, to: Date())
-        let message = "Today \(user.name) \(user.surname) is celebrating \(yearOfBirth.year!) years!"
-        content.body = message
+        if let yearOfBirth = yearOfBirth.year {
+            let message = "Today \(user.name) \(user.surname) is celebrating \(yearOfBirth) years!"
+            content.body = message
+        }
         content.sound = UNNotificationSound.default
     }
     
