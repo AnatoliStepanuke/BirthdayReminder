@@ -5,4 +5,8 @@ extension UITextField {
         layer.cornerRadius = 16
         clipsToBounds = true
     }
+    
+    internal func colorsTextField() {
+        backgroundColor = AppColor.fieldsColor
+    }
 }

@@ -36,7 +36,7 @@ final class MainListTableViewController: UITableViewController {
         title = "Birthdays List"
         navigationController?.navigationBar.prefersLargeTitles = true
         let plusButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openScreenForSaveVCDidTapped))
-        plusButton.tintColor = .black
+        plusButton.tintColor = AppColor.plusButtonColor
         let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(openTrashTableVCDidTapped))
         trashButton.tintColor = .systemRed
         navigationItem.rightBarButtonItem = plusButton
