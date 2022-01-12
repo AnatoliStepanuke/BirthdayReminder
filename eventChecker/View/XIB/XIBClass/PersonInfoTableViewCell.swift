@@ -10,7 +10,7 @@ final class PersonInfoTableViewCell: UITableViewCell {
     // MARK: - Lyfecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.backgroundColor = .white
+        containerView.backgroundColor = AppColor.cellColor
         containerView.layer.cornerRadius = 16
         backgroundColor = .clear
         selectionStyle = .none

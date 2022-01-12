@@ -16,11 +16,11 @@
 		DC3F1345272F11C900D1C517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3F1344272F11C900D1C517 /* Assets.xcassets */; };
 		DC3F1348272F11C900D1C517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3F1346272F11C900D1C517 /* LaunchScreen.storyboard */; };
 		DC4C8DC92736D199006FC381 /* ScreenForSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C8DC82736D199006FC381 /* ScreenForSaveViewController.swift */; };
-		DC4C8DCF2737FD5E006FC381 /* UIButton+roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C8DCE2737FD5E006FC381 /* UIButton+roundedButton.swift */; };
+		DC4C8DCF2737FD5E006FC381 /* UIButton+roundedButton+colorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C8DCE2737FD5E006FC381 /* UIButton+roundedButton+colorButton.swift */; };
 		DC520FC7274E9CAC00D5C368 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC520FC6274E9CAC00D5C368 /* UserDefaultsManager.swift */; };
 		DC520FC92754119100D5C368 /* UserManager+constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC520FC82754119100D5C368 /* UserManager+constants.swift */; };
 		DC5B19382758CF6400944323 /* TrashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B19372758CF6400944323 /* TrashTableViewController.swift */; };
-		DC8B2DC027398393005FE86C /* UITextField+roundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B2DBF27398393005FE86C /* UITextField+roundedTextField.swift */; };
+		DC8B2DC027398393005FE86C /* UITextField+roundedTextField+colorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B2DBF27398393005FE86C /* UITextField+roundedTextField+colorTextField.swift */; };
 		DC8B2DC627412E64005FE86C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B2DC527412E64005FE86C /* User.swift */; };
 		DCB01C4527664F4000B592F4 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB01C4427664F4000B592F4 /* NotificationManager.swift */; };
 		DCF089C827315A8200143794 /* MainListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF089C727315A8200143794 /* MainListTableViewController.swift */; };
@@ -42,11 +42,11 @@
 		DC3F1347272F11C900D1C517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC3F1349272F11C900D1C517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC4C8DC82736D199006FC381 /* ScreenForSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenForSaveViewController.swift; sourceTree = "<group>"; };
-		DC4C8DCE2737FD5E006FC381 /* UIButton+roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+roundedButton.swift"; sourceTree = "<group>"; };
+		DC4C8DCE2737FD5E006FC381 /* UIButton+roundedButton+colorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+roundedButton+colorButton.swift"; sourceTree = "<group>"; };
 		DC520FC6274E9CAC00D5C368 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		DC520FC82754119100D5C368 /* UserManager+constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+constants.swift"; sourceTree = "<group>"; };
 		DC5B19372758CF6400944323 /* TrashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashTableViewController.swift; sourceTree = "<group>"; };
-		DC8B2DBF27398393005FE86C /* UITextField+roundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+roundedTextField.swift"; sourceTree = "<group>"; };
+		DC8B2DBF27398393005FE86C /* UITextField+roundedTextField+colorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+roundedTextField+colorTextField.swift"; sourceTree = "<group>"; };
 		DC8B2DC527412E64005FE86C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = eventChecker/Extension/User.swift; sourceTree = SOURCE_ROOT; };
 		DCB01C4427664F4000B592F4 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		DCF089C727315A8200143794 /* MainListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewController.swift; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 		DC4C8DCD2737FD28006FC381 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DC4C8DCE2737FD5E006FC381 /* UIButton+roundedButton.swift */,
-				DC8B2DBF27398393005FE86C /* UITextField+roundedTextField.swift */,
+				DC4C8DCE2737FD5E006FC381 /* UIButton+roundedButton+colorButton.swift */,
+				DC8B2DBF27398393005FE86C /* UITextField+roundedTextField+colorTextField.swift */,
 				DC520FC82754119100D5C368 /* UserManager+constants.swift */,
 				DCFC53E3275805B700F8BF36 /* UserManager+singleton.swift */,
 				DC21BD0B2771EC3400AC2EFE /* NotificationManager+singleton.swift */,
@@ -278,11 +278,11 @@
 				DCB01C4527664F4000B592F4 /* NotificationManager.swift in Sources */,
 				DC3F133B272F11C900D1C517 /* SceneDelegate.swift in Sources */,
 				DC0C47102784883A002C6844 /* Colors.swift in Sources */,
-				DC4C8DCF2737FD5E006FC381 /* UIButton+roundedButton.swift in Sources */,
+				DC4C8DCF2737FD5E006FC381 /* UIButton+roundedButton+colorButton.swift in Sources */,
 				DC8B2DC627412E64005FE86C /* User.swift in Sources */,
 				DCFC53E4275805B700F8BF36 /* UserManager+singleton.swift in Sources */,
 				DC520FC7274E9CAC00D5C368 /* UserDefaultsManager.swift in Sources */,
-				DC8B2DC027398393005FE86C /* UITextField+roundedTextField.swift in Sources */,
+				DC8B2DC027398393005FE86C /* UITextField+roundedTextField+colorTextField.swift in Sources */,
 				DCF089C827315A8200143794 /* MainListTableViewController.swift in Sources */,
 				DC4C8DC92736D199006FC381 /* ScreenForSaveViewController.swift in Sources */,
 				DC520FC92754119100D5C368 /* UserManager+constants.swift in Sources */,
@@ -443,6 +443,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +472,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
