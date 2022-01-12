@@ -6,7 +6,7 @@ extension UITextField {
         clipsToBounds = true
     }
     
-    internal func colorsTextField() {
+    internal func backgroundColorTextField() {
         backgroundColor = AppColor.fieldsColor
     }
 }

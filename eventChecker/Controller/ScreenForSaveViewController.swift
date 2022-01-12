@@ -55,14 +55,13 @@ final class ScreenForSaveViewController: UIViewController {
     private func setupFields() {
         nameField.roundedTextField()
         surnameField.roundedTextField()
-        nameField.colorsTextField()
-        surnameField.colorsTextField()
+        nameField.backgroundColorTextField()
+        surnameField.backgroundColorTextField()
     }
     
     private func setupSaveButton() {
         saveButton.roundedButton()
-//        saveButton.backgroundColor = .white
-        saveButton.colorsButton()
+        saveButton.backgroundColorButton()
         saveButton.setTitle("Save", for: .normal)
     }
     

@@ -5,7 +5,7 @@ extension UIButton {
         layer.cornerRadius = 16
     }
     
-    internal func colorsButton() {
+    internal func backgroundColorButton() {
         backgroundColor = AppColor.buttonColor
     }
 }
