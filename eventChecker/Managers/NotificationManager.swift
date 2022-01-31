@@ -7,13 +7,13 @@ final class NotificationManager {
     private let content = UNMutableNotificationContent()
     private let center = UNUserNotificationCenter.current()
     private let calendar = Calendar.current
-    
+
     // MARK: - Public
     static let instance = NotificationManager()
-    
+
     // MARK: - Init
-    private init(){ }
-    
+    private init() { }
+
     // MARK: - Setups
     private func setupContentNotification(user: User) {
         let yearOfBirth = calendar.dateComponents([.year], from: user.dateOfBirth, to: Date())
@@ -23,7 +23,7 @@ final class NotificationManager {
         }
         content.sound = UNNotificationSound.default
     }
-    
+
     private func setupTriggerNotification(user: User) -> UNCalendarNotificationTrigger {
         var date = calendar.dateComponents([.month, .day], from: user.dateOfBirth)
         let time = calendar.dateComponents([.hour, .minute], from: user.timeOfNotification)
@@ -31,22 +31,26 @@ final class NotificationManager {
         date.minute = time.minute
         return UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
     }
-    
+
     private func setupRequestNotification(user: User) {
-        let request = UNNotificationRequest(identifier: user.id, content: content, trigger: setupTriggerNotification(user: user))
+        let request = UNNotificationRequest(
+            identifier: user.id,
+            content: content, trigger:
+                setupTriggerNotification(user: user)
+        )
         center.add(request, withCompletionHandler: nil)
     }
-        
+
     // MARK: - API
     func createNotification(user: User) {
         setupContentNotification(user: user)
         setupRequestNotification(user: user)
     }
-    
+
     func deleteNotification(idUser: String) {
         center.removePendingNotificationRequests(withIdentifiers: [idUser])
     }
-    
+
     func restoreDeletedNotification(user: User) {
         setupRequestNotification(user: user)
     }

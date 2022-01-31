@@ -1,10 +1,8 @@
 import Foundation
 
 extension UserManager {
-    enum Constants {
-        enum UserDefaults {
-            static let userList = "userList"
-            static let deleteUserList = "deleteUserList"
-        }
+    enum ConstantsUserDefaults {
+        static let userList = "userList"
+        static let deleteUserList = "deleteUserList"
     }
 }
