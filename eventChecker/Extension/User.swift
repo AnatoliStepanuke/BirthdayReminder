@@ -25,7 +25,7 @@ extension User: CustomStringConvertible {
         """
         return message
     }
-    
+
     var dateDescription: String {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
