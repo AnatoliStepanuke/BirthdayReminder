@@ -8,7 +8,7 @@ final class MainListTableViewController: UITableViewController {
         }
     }
 
-    // MARK: - Lyfecycle
+    // MARK: - Lifecycle 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
