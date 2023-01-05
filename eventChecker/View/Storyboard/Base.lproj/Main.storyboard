@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y0w-TO-NVm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y0w-TO-NVm">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -56,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter some information below:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqs-gj-0UH">
-                                <rect key="frame" x="30" y="49" width="315" height="40"/>
+                                <rect key="frame" x="30" y="52" width="315" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5ob-a6-GgY"/>
                                 </constraints>
@@ -65,25 +65,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdX-kb-9J4">
-                                <rect key="frame" x="30" y="107" width="315" height="34"/>
+                                <rect key="frame" x="30" y="110" width="315" height="34"/>
                                 <color key="backgroundColor" name="fieldsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="wa6-LC-9j6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Surname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqC-Bd-UuG">
-                                <rect key="frame" x="30" y="161" width="315" height="34"/>
+                                <rect key="frame" x="30" y="164" width="315" height="34"/>
                                 <color key="backgroundColor" name="fieldsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="wSc-aF-mvi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-l2-UrM">
-                                <rect key="frame" x="5" y="200" width="365" height="216"/>
+                                <rect key="frame" x="5" y="203" width="365" height="249"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfg-jd-cJ4">
                                 <rect key="frame" x="30" y="723" width="315" height="40"/>
@@ -101,7 +101,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your preferred time to remind:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-dU-6ec">
-                                <rect key="frame" x="30" y="421" width="315" height="40"/>
+                                <rect key="frame" x="30" y="457" width="315" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="glr-ww-1Lc"/>
                                 </constraints>
@@ -110,7 +110,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="E7i-cD-pgR">
-                                <rect key="frame" x="5" y="466" width="365" height="252"/>
+                                <rect key="frame" x="5" y="502" width="365" height="216"/>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zsB-tm-oJw"/>
@@ -160,7 +160,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y0w-TO-NVm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fZM-XS-e6a">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -181,7 +181,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
