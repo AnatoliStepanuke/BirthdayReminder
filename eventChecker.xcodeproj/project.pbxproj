@@ -69,6 +69,7 @@
 		DC0C471127878AAB002C6844 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				DC3F1344272F11C900D1C517 /* Assets.xcassets */,
 				DC0C470F2784883A002C6844 /* Colors.swift */,
 			);
 			path = Assets;
@@ -108,12 +109,12 @@
 			path = XIBView;
 			sourceTree = "<group>";
 		};
-		DC35719C2731979A00BB7D3C /* Model */ = {
+		DC35719C2731979A00BB7D3C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				DC8B2DC527412E64005FE86C /* User.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DC3F132C272F11C900D1C517 = {
@@ -135,21 +136,20 @@
 		DC3F1337272F11C900D1C517 /* eventChecker */ = {
 			isa = PBXGroup;
 			children = (
-				DCF089C32731574100143794 /* AppDelegate */,
 				DC0C471127878AAB002C6844 /* Assets */,
-				DC3F1344272F11C900D1C517 /* Assets.xcassets */,
-				DCF089C52731578100143794 /* Controller */,
+				DCF089C52731578100143794 /* Controllers */,
+				DCF089C32731574100143794 /* Delegates */,
 				DC3F1341272F11C900D1C517 /* eventChecker.xcdatamodeld */,
-				DC4C8DCD2737FD28006FC381 /* Extension */,
+				DC4C8DCD2737FD28006FC381 /* Extensions */,
 				DC3F1349272F11C900D1C517 /* Info.plist */,
 				DC520FC5274E9C6900D5C368 /* Managers */,
-				DC35719C2731979A00BB7D3C /* Model */,
-				DCF089C42731575900143794 /* View */,
+				DC35719C2731979A00BB7D3C /* Models */,
+				DCF089C42731575900143794 /* Views */,
 			);
 			path = eventChecker;
 			sourceTree = "<group>";
 		};
-		DC4C8DCD2737FD28006FC381 /* Extension */ = {
+		DC4C8DCD2737FD28006FC381 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				DC4C8DCE2737FD5E006FC381 /* UIButton+roundedButton+colorButton.swift */,
@@ -158,7 +158,7 @@
 				DCFC53E3275805B700F8BF36 /* UserManager+singleton.swift */,
 				DC21BD0B2771EC3400AC2EFE /* NotificationManager+singleton.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DC520FC5274E9C6900D5C368 /* Managers */ = {
@@ -170,32 +170,32 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		DCF089C32731574100143794 /* AppDelegate */ = {
+		DCF089C32731574100143794 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
 				DC3F1338272F11C900D1C517 /* AppDelegate.swift */,
 				DC3F133A272F11C900D1C517 /* SceneDelegate.swift */,
 			);
-			path = AppDelegate;
+			path = Delegates;
 			sourceTree = "<group>";
 		};
-		DCF089C42731575900143794 /* View */ = {
+		DCF089C42731575900143794 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				DC3571992731974E00BB7D3C /* XIB */,
 				DC3571982731972600BB7D3C /* Storyboard */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		DCF089C52731578100143794 /* Controller */ = {
+		DCF089C52731578100143794 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				DCF089C727315A8200143794 /* MainListTableViewController.swift */,
 				DC4C8DC82736D199006FC381 /* ScreenForSaveViewController.swift */,
 				DC5B19372758CF6400944323 /* TrashTableViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
