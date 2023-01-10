@@ -149,14 +149,46 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DC4C8DCD2737FD28006FC381 /* Extensions */ = {
+		DC44BFB5296DDBC900F412FF /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
 				DC4C8DCE2737FD5E006FC381 /* UIButton+roundedButton+colorButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		DC44BFB6296DDBD400F412FF /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
 				DC8B2DBF27398393005FE86C /* UITextField+roundedTextField+colorTextField.swift */,
-				DC520FC82754119100D5C368 /* UserManager+constants.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		DC44BFB8296DDBE700F412FF /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
 				DCFC53E3275805B700F8BF36 /* UserManager+singleton.swift */,
+				DC520FC82754119100D5C368 /* UserManager+constants.swift */,
+			);
+			path = UserManager;
+			sourceTree = "<group>";
+		};
+		DC44BFB9296DDBF200F412FF /* NotificationManager */ = {
+			isa = PBXGroup;
+			children = (
 				DC21BD0B2771EC3400AC2EFE /* NotificationManager+singleton.swift */,
+			);
+			path = NotificationManager;
+			sourceTree = "<group>";
+		};
+		DC4C8DCD2737FD28006FC381 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC44BFB9296DDBF200F412FF /* NotificationManager */,
+				DC44BFB5296DDBC900F412FF /* UIButton */,
+				DC44BFB6296DDBD400F412FF /* UITextField */,
+				DC44BFB8296DDBE700F412FF /* UserManager */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
