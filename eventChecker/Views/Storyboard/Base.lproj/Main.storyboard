@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main List Table View Controller-->
+        <!--Birthdays List Table View Controller-->
         <scene sceneID="Q9M-6N-tuT">
             <objects>
-                <tableViewController id="9JN-WM-iee" customClass="MainListTableViewController" customModule="eventChecker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="9JN-WM-iee" customClass="BirthdaysListTableViewController" customModule="eventChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="zAm-lN-YEN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,7 @@
                                     <constraint firstAttribute="height" constant="34" id="wa6-LC-9j6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Surname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqC-Bd-UuG">
                                 <rect key="frame" x="30" y="164" width="315" height="34"/>
@@ -80,7 +80,7 @@
                                     <constraint firstAttribute="height" constant="34" id="wSc-aF-mvi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-l2-UrM">
                                 <rect key="frame" x="5" y="203" width="365" height="249"/>
@@ -118,7 +118,6 @@
                         <constraints>
                             <constraint firstItem="zsB-tm-oJw" firstAttribute="trailing" secondItem="jqs-gj-0UH" secondAttribute="trailing" constant="30" id="42Q-Z9-hV8"/>
                             <constraint firstItem="jqs-gj-0UH" firstAttribute="leading" secondItem="gdX-kb-9J4" secondAttribute="leading" id="5ZP-JU-3Sg"/>
-                            <constraint firstItem="jqs-gj-0UH" firstAttribute="centerX" secondItem="CG4-zw-qQl" secondAttribute="centerX" id="6pG-mL-D6I"/>
                             <constraint firstItem="zsB-tm-oJw" firstAttribute="trailing" secondItem="HCG-l2-UrM" secondAttribute="trailing" constant="5" id="8gZ-9r-zTh"/>
                             <constraint firstItem="pfg-jd-cJ4" firstAttribute="trailing" secondItem="Tve-dU-6ec" secondAttribute="trailing" id="9QV-Iy-dxa"/>
                             <constraint firstItem="gdX-kb-9J4" firstAttribute="top" secondItem="jqs-gj-0UH" secondAttribute="bottom" constant="18" id="Ak5-On-fwk"/>

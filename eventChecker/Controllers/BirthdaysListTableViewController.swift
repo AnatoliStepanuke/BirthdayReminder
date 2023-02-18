@@ -1,6 +1,6 @@
 import UIKit
 
-final class MainListTableViewController: UITableViewController {
+final class BirthdaysListTableViewController: UITableViewController {
     // MARK: - Properties
     private var users: [User] = [] {
         didSet {
@@ -70,6 +70,10 @@ final class MainListTableViewController: UITableViewController {
         navigationController?.pushViewController(trashTableViewController, animated: true)
     }
 
+}
+
+// MARK: - Extensions
+extension BirthdaysListTableViewController {
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
@@ -94,9 +98,9 @@ final class MainListTableViewController: UITableViewController {
             style: .normal,
             title: "Move to Trash",
             handler: { (_:UIContextualAction, _:UIView, _:(Bool) -> Void) in
-            UserManager.instance.saveDeletedUserToUserDefaults(deletedUser: self.users.remove(at: indexPath.row))
-            UserManager.instance.updateUsersFromUserDefaults(updatedUsers: self.users)
-        })
+                UserManager.instance.saveDeletedUserToUserDefaults(deletedUser: self.users.remove(at: indexPath.row))
+                UserManager.instance.updateUsersFromUserDefaults(updatedUsers: self.users)
+            })
         deleteAction.backgroundColor = .systemRed
 
         return UISwipeActionsConfiguration(actions: [deleteAction])
