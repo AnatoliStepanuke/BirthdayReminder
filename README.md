@@ -1,5 +1,5 @@
 # BirthdayReminder
-App send a notifications, so that you don't miss the birthday of your friend or someone is close to you.
+App send a notifications, so you don't miss the birthday of your friend or someone is close to you.
 
 ## Technologies
 + UIKit
